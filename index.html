@@ -346,11 +346,10 @@
 <!-- End Method Overview -->
 
 <!-- Method Overview -->
-<section class="section hero is-light">
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Method Overview</h2>
     <div class="content has-text-centered">
-      <!-- TODO: Add Figure 2 - Self-supervised pretraining overview -->
       <img src="static/images/self_distillation.png" alt="DeFM self-supervised pretraining pipeline" style="max-width: 100%; height: auto;"/>
       <p class="has-text-justified" style="margin-top: 1rem;">
         <strong>Self-Distillation Framework:</strong> DeFM uses a DINOv2-style self-distillation objective with global and local crops. The student network processes masked global crops and local crops, learning to match the teacher's representation through DINO losses and iBOT patch-level supervision.
@@ -358,7 +357,6 @@
     </div>
     
         <div class="content has-text-centered">
-      <!-- TODO: Add Figure 2 - Self-supervised pretraining overview -->
       <img src="static/images/cnn_distillation.png" alt="DeFM self-supervised pretraining pipeline" style="max-width: 100%; height: auto;"/>
       <p class="has-text-justified" style="margin-top: 1rem;">
         <strong>CNN-Distillation Framework:</strong>A BiFPN module is added on top of the CNN encoder to produce dense spatial features, which are supervised using the teacher’s spatial tokens. The teacher’s class token provides global supervision to the CNN’s pooled feature representation.
@@ -366,15 +364,49 @@
     </div>
 
     <div class="content has-text-centered" style="margin-top: 3rem;">
-      <!-- TODO: Add Figure 3 - Input normalization visualization -->
-      <img src="static/images/input_normalization.png" alt="Three-channel metric-aware depth normalization" style="max-width: 100%; height: auto;"/>
+      <img src="static/images/input_norm_turbo.png" alt="Three-channel metric-aware depth normalization" style="max-width: 100%; height: auto;"/>
       <p class="has-text-justified" style="margin-top: 1rem;">
         <strong>Metric-Aware Input Normalization:</strong> Log normalization effectively captures the overall depth range while preserving fine-grained structure in near-field regions (b, d, f). In contrast, standard metric normalization yields weaker contrast and poorly separated gradients (c, e). In our representation, we stack columns (b), (d), and (f) to form a 3-channel normalized depth input, which preserves metric depth while maintaining robustness across diverse domains.
       </p>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End Method Overview -->
+
+<!-- Method Overview Carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Method Overview</h2>
+      <p class="subtitle"></p>
+      <div id="semantic-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- TODO: Add Figure 5 - PCA on cups from different sensors -->
+          <img src="static/images/self_distillation.png" alt="" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            <strong>Self-Distillation Framework:</strong> DeFM uses a DINOv2-style self-distillation objective with global and local crops. The student network processes masked global crops and local crops, learning to match the teacher's representation through DINO losses and iBOT patch-level supervision.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- TODO: Add Figure 1 Panel V - Drawer handles -->
+          <img src="static/images/cnn_distillation.png" alt="PCA visualization of drawer and cabinet handles" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+             <strong>CNN-Distillation Framework:</strong>A BiFPN module is added on top of the CNN encoder to produce dense spatial features, which are supervised using the teacher’s spatial tokens. The teacher’s class token provides global supervision to the CNN’s pooled feature representation.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- TODO: Add Figure 13 - DROID kitchen scenes -->
+          <img src="static/images/input_norm_turbo.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            <strong>Metric-Aware Input Normalization:</strong> Log normalization effectively captures the overall depth range while preserving fine-grained structure in near-field regions (b, d, f). In contrast, standard metric normalization yields weaker contrast and poorly separated gradients (c, e). In our representation, we stack columns (b), (d), and (f) to form a 3-channel normalized depth input, which preserves metric depth while maintaining robustness across diverse domains.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method Overview Carousel -->
+
 
 <!-- Semantic Awareness Carousel -->
 <section class="hero is-small">
@@ -385,28 +417,35 @@
       <div id="semantic-carousel" class="carousel results-carousel">
         <div class="item">
           <!-- TODO: Add Figure 5 - PCA on cups from different sensors -->
-          <img src="static/images/semantic_cups.png" alt="PCA visualization of cup features across sensors" loading="lazy"/>
+          <img src="static/images/cups_a.png" alt="PCA visualization of cup features across sensors" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Consistent semantic clustering of cup handles (yellow) across Realsense L515, D435i, ZED 2i, and ZED X sensors.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- TODO: Add Figure 5 - PCA on cups from different sensors -->
+          <img src="static/images/cups_b.png" alt="PCA visualization of cup features across sensors" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             Consistent semantic clustering of cup handles (yellow) across Realsense L515, D435i, ZED 2i, and ZED X sensors.
           </h2>
         </div>
         <div class="item">
           <!-- TODO: Add Figure 1 Panel V - Drawer handles -->
-          <img src="static/images/semantic_drawers.png" alt="PCA visualization of drawer and cabinet handles" loading="lazy"/>
+          <img src="static/images/drawers_pca.png" alt="PCA visualization of drawer and cabinet handles" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             DeFM automatically identifies and highlights drawer and cabinet handles across various furniture types.
           </h2>
         </div>
         <div class="item">
           <!-- TODO: Add Figure 13 - DROID kitchen scenes -->
-          <img src="static/images/semantic_kitchen.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
+          <img src="static/images/droid_pca.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             Complex kitchen scenes show clear clustering: countertops, background surfaces, robot arms, and manipulable objects each have distinct features.
           </h2>
         </div>
         <div class="item">
           <!-- TODO: Add Figure 15 - Ladder climbing PCA -->
-          <img src="static/images/semantic_ladder.png" alt="PCA visualization of ladder structure from real deployment" loading="lazy"/>
+          <img src="static/images/ladder_pca.png" alt="PCA visualization of ladder structure from real deployment" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             Real-world ladder climbing: DeFM consistently assigns similar features to ladder structures despite heavy sensor noise.
           </h2>
