@@ -136,7 +136,7 @@
           <div class="work-info">
             <h5>NaviTrace</h5>
             <p>Visual navigation and locomotion with tracking and mapping for enhanced spatial awareness.</p>
-            <span class="work-venue">RSL 2024</span>
+            <span class="work-venue">Arxiv 2025</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -152,7 +152,7 @@
           <div class="work-info">
             <h5>RoadRunner</h5>
             <p>Multimodal perception for robust legged robot navigation in challenging terrains.</p>
-            <span class="work-venue">RSL 2024</span>
+            <span class="work-venue">RA-L 2024</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -169,21 +169,21 @@
             <h1 class="title is-1 publication-title">DeFM: Learning Foundation Representations from Depth for Robotics</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://github.com/manthan99" target="_blank">Manthan Patel</a><sup>1</sup>,</span>
+                <a href="https://manthan99.github.io/" target="_blank">Manthan Patel</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://leggedrobotics.github.io/authors/jonas/" target="_blank">Jonas Frey</a><sup>1,2,3</sup>,</span>
+                <a href="https://jonasfrey96.github.io/" target="_blank">Jonas Frey</a><sup>1,2,3</sup>,</span>
               <span class="author-block">
                 <a href="https://mayankm96.github.io/" target="_blank">Mayank Mittal</a><sup>1,4</sup>,</span>
               <span class="author-block">
-                <a href="https://theairlab.org/team/fanyang/" target="_blank">Fan Yang</a><sup>1</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=R3OeSRoAAAAJ&hl=en" target="_blank">Fan Yang</a><sup>1</sup>,</span>
               <span class="author-block">
                 Alexander Hansson<sup>1</sup>,</span>
               <span class="author-block">
                 <a href="https://amirbar.net/" target="_blank">Amir Bar</a><sup>3</sup>,</span>
               <span class="author-block">
-                <a href="https://n.ethz.ch/~cesarc/" target="_blank">Cesar Cadena</a><sup>1</sup>,</span>
+                <a href="https://mavt.ethz.ch/people/person-detail.cesar-cadena.html" target="_blank">Cesar Cadena</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://rsl.ethz.ch/the-lab/people/person-detail.MTIxOTEx.TGlzdC8yNDQxLC0xNDI1MTk1NzM1.html" target="_blank">Marco Hutter</a><sup>1</sup>
+                <a href="https://rsl.ethz.ch/the-lab/people/person-detail.hutter.html" target="_blank">Marco Hutter</a><sup>1</sup>
               </span>
             </div>
 
@@ -203,17 +203,6 @@
                   <span>Paper</span>
                 </a>
               </span>
-
-              <!-- TODO: Add supplementary material if available -->
-              <span class="link-block">
-                <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fas fa-file-pdf"></i>
-                </span>
-                <span>Supplementary</span>
-              </a>
-            </span>
 
             <span class="link-block">
               <a href="https://github.com/leggedrobotics/defm" target="_blank"
@@ -238,13 +227,13 @@
 
         <span class="link-block">
           <a href="https://huggingface.co/leggedrobotics/defm" target="_blank"
-          class="external-link button is-normal is-rounded is-dark">
-          <span class="icon">
-            <i class="fas fa-smile"></i>
-          </span>
-          <span>HuggingFace</span>
-        </a>
-      </span>
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <span>🤗</span>
+            </span>
+            <span>Hugging Face</span>
+          </a>
+        </span>
       </div>
     </div>
   </div>
@@ -259,10 +248,10 @@
     <div class="hero-body">
       <!-- TODO: Replace with actual teaser video showing all tasks -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <source src="static/videos/DeFM_video_v3.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        DeFM learns robust depth representations that transfer zero-shot across navigation, manipulation, and locomotion tasks, achieving state-of-the-art performance on diverse robotic benchmarks.
+        DeFM learns robust representations from depth images that transfer zero-shot across navigation, manipulation, and locomotion tasks, achieving state-of-the-art performance on diverse benchmarks.
       </h2>
     </div>
   </div>
@@ -278,6 +267,8 @@
         <div class="content has-text-justified">
           <p>
             Depth sensors are widely deployed across robotic platforms, and advances in fast, high-fidelity depth simulation have enabled robotic policies trained on depth observations to achieve robust sim-to-real transfer for a wide range of tasks. Despite this, representation learning for depth modality remains underexplored compared to RGB, where large-scale foundation models now define the state of the art. To address this gap, we present DeFM, a self-supervised foundation model trained entirely on depth images for robotic applications. Using a DINO-style self-distillation objective on a curated dataset of 60M depth images, DeFM learns geometric and semantic representations that generalize to diverse environments, tasks, and sensors. To retain metric awareness across multiple scales, we introduce a novel input normalization strategy. We further distill DeFM into compact models suitable for resource-constrained robotic systems. When evaluated on depth-based classification, segmentation, navigation, locomotion, and manipulation benchmarks, DeFM achieves state-of-the-art performance and demonstrates strong generalization from simulation to real-world environments.
+            
+            tl;dr: A DINO-style encoder, but for depth image inputs. Works on diverse robotics tasks without task-specific finetuning.
           </p>
         </div>
       </div>
