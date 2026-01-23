@@ -315,7 +315,7 @@
       <div class="column is-half contribution-column">
         <div class="box contribution-box">
           <h3 class="title is-5"><i class="fas fa-ruler"></i> Novel Metric-Aware Normalization</h3>
-          <p>A novel 3-channel log-compressed input representation ($C_1, C_2, C_3$) preserving metric depth across scales from millimeters to 100 meters.</p>
+          <p>A novel 3-channel log-compressed input representation preserving metric depth across scales from millimeters to 100 meters.</p>
         </div>
       </div>
 
@@ -340,7 +340,7 @@
       <!-- TODO: Add Figure 2 - Self-supervised pretraining overview -->
       <img src="static/images/overview.png" alt="DeFM overview" style="max-width: 100%; height: auto;"/>
       <p class="has-text-justified" style="margin-top: 1rem;">
-       <strong>DeFM Overview:</strong>  We present DeFM, a foundation model for depth images. Pretrained using DINOv2 style self-distillation method (III) on a curated depth dataset of \SI{60}{M} images (II), DeFM features achieve state-of-the-art results across several classification and semantic segmentation benchmarks (linear probing) (I). Features obtained from DeFM reveal semantic awareness upon performing PCA despite depth lacking texture and color (V). We distill our largest DeFM model into several efficient CNN networks (IV) to be used for various downstream robotic Reinforcement Learning tasks, including navigation, manipulation, and locomotion (VI).
+       <strong>DeFM Overview:</strong>  We present DeFM, a foundation model for depth images. Pretrained using DINOv2 style self-distillation method (III) on a curated depth dataset of 60 M images (II), DeFM features achieve state-of-the-art results across several classification and semantic segmentation benchmarks (linear probing) (I). Features obtained from DeFM reveal semantic awareness upon performing PCA despite depth lacking texture and color (V). We distill our largest DeFM model into several efficient CNN networks (IV) to be used for various downstream robotic Reinforcement Learning tasks, including navigation, manipulation, and locomotion (VI).
       </p>
     </div>
 <!-- End Method Overview -->
@@ -642,7 +642,7 @@
     <h2 class="title is-3 has-text-centered">Dense Prediction: Semantic Segmentation</h2>
     <div class="content has-text-centered">
       <!-- TODO: Add Figure 6 - Qualitative segmentation comparisons -->
-      <img src="static/images/segmentation_comparison.png" alt="Segmentation results across 5 datasets" style="max-width: 100%; height: auto;"/>
+      <img src="static/images/segmentation_vits.png" alt="Segmentation results across 5 datasets" style="max-width: 100%; height: auto;"/>
       <p class="has-text-justified" style="margin-top: 1rem;">
         <strong>Qualitative Results:</strong> DeFM-S/14 significantly outperforms DINOv3-S/16 on diverse segmentation tasks spanning indoor (ScanNet, SUN-RGBD), outdoor (OFFSED, TartanGround), and manipulation (GraspNet-1B) domains.
       </p>
@@ -699,7 +699,7 @@
           </tbody>
         </table>
         <p class="has-text-centered" style="margin-top: 1rem;">
-          <strong>Key Result:</strong> DeFM achieves state-of-the-art on 4/5 datasets. DeFM-S/14 shows up to 30% mIoU improvement over similar-sized baselines, demonstrating the critical need for depth-specific foundation models.
+          <strong>Key Result:</strong> DeFM achieves state-of-the-art on 4/5 datasets. DeFM-S/14 shows up to 30% mIoU improvement over similar-sized baselines, demonstrating the critical need for depth-specific efficient foundation models.
         </p>
       </div>
     </div>
@@ -730,7 +730,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>DeFM ViT-L/14</strong></td>
+              <td><strong>ViT-L/14</strong></td>
               <td>307M</td>
               <td>9962 G</td>
               <td>625</td>
@@ -738,7 +738,7 @@
               <td>Maximum accuracy, offline processing</td>
             </tr>
             <tr>
-              <td><strong>DeFM ViT-S/14</strong></td>
+              <td><strong>ViT-S/14</strong></td>
               <td>22M</td>
               <td>707 G</td>
               <td>64</td>
@@ -764,7 +764,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>DeFM ResNet-50</strong></td>
+              <td><strong>ResNet-50</strong></td>
               <td>26M</td>
               <td>631 G</td>
               <td>69</td>
@@ -772,7 +772,7 @@
               <td>Strong features, efficient training</td>
             </tr>
             <tr>
-              <td><strong>DeFM ResNet-34</strong></td>
+              <td><strong>ResNet-34</strong></td>
               <td>22M</td>
               <td>494 G</td>
               <td>33</td>
@@ -780,7 +780,7 @@
               <td>Good balance for mid-range hardware</td>
             </tr>
             <tr>
-              <td><strong>DeFM ResNet-18</strong></td>
+              <td><strong>ResNet-18</strong></td>
               <td>12M</td>
               <td>256 G</td>
               <td>21</td>
