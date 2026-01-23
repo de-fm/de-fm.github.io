@@ -749,5 +749,13 @@ a:focus {
   }
 }
 
+/* This ensures every column in the contributions section behaves as a flex container */
+.contribution-column {
+  display: flex;
+}
 
-
+/* This tells the box to stretch to the full height of the parent column */
+.contribution-box {
+  height: 100%;
+  width: 100%;
+}
