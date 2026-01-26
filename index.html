@@ -71,6 +71,76 @@
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
   
+  <style>
+  /* Mobile optimizations */
+  @media screen and (max-width: 768px) {
+    .publication-title {
+      font-size: 1.75rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .publication-authors {
+      font-size: 0.85rem !important;
+    }
+    
+    .button {
+      font-size: 0.8rem !important;
+      padding: 0.5rem !important;
+    }
+    
+    .title.is-3 {
+      font-size: 1.5rem !important;
+    }
+    
+    .title.is-4 {
+      font-size: 1.25rem !important;
+    }
+    
+    .subtitle {
+      font-size: 0.9rem !important;
+    }
+    
+    /* Fix images and videos */
+    img, video {
+      max-width: 100% !important;
+      height: auto !important;
+      display: block;
+    }
+    
+    /* Make tables scrollable */
+    .table-container, .box .content {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .table {
+      font-size: 0.7rem !important;
+    }
+    
+    .table th, .table td {
+      padding: 0.4rem 0.2rem !important;
+      white-space: nowrap;
+    }
+    
+    /* Reduce padding */
+    .section {
+      padding: 1.5rem 0.75rem !important;
+    }
+    
+    .box {
+      padding: 0.75rem !important;
+    }
+    
+    .contribution-box h3 {
+      font-size: 0.95rem !important;
+    }
+    
+    .contribution-box p {
+      font-size: 0.85rem !important;
+    }
+  }
+  </style>
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -247,7 +317,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with actual teaser video showing all tasks -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
         <source src="static/videos/DeFM_video_v3.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -464,7 +534,7 @@
       <h2 class="title is-3">Navigation: Embodiment-Aware Long-Range Navigation</h2>
       <div id="navigation-carousel" class="carousel results-carousel">
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_navigation_sim.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -472,7 +542,7 @@
               </h2>
         </div>
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_nav_realworld.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -480,7 +550,7 @@
               </h2>
         </div>
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_nav_realworld_long.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -528,7 +598,7 @@
       <h2 class="title is-3">Manipulation: Dexterous Grasping</h2>
       <div id="manipulation-carousel" class="carousel results-carousel">
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_manipulation_text.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -584,7 +654,7 @@
       <h2 class="title is-3">Locomotion: Quadruped Ladder Climbing</h2>
       <div id="locomotion-carousel" class="carousel results-carousel">
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_ladder_final.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -642,6 +712,7 @@
     <div class="box" style="margin-top: 2rem; background-color: #faf5ff;">
       <h3 class="title is-4 has-text-centered">Segmentation Performance (mIoU)</h3>
       <div class="content">
+        <div style="overflow-x: auto;"></div>
         <table class="table is-striped is-fullwidth">
           <thead>
             <tr>
@@ -691,6 +762,7 @@
         <p class="has-text-centered" style="margin-top: 1rem;">
           <strong>Key Result:</strong> DeFM achieves state-of-the-art on 4/5 datasets. DeFM-S/14 shows up to 30% mIoU improvement over similar-sized baselines, demonstrating the critical need for depth-specific efficient foundation models.
         </p>
+        </div>
       </div>
     </div>
   </div>
@@ -950,7 +1022,7 @@
   title={DeFM: Learning Foundation Representations from Depth for Robotics},
   author={Patel, Manthan and Frey, Jonas and Mittal, Mayank and Yang, Fan and Hansson, Alexander and Bar, Amir and Cadena, Cesar and Hutter, Marco},
   journal={Under Review},
-  year={2025},
+  year={2026},
   url={https://leggedrobotics.github.io/defm}
 }</code></pre>
   </div>
