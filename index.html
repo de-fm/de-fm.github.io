@@ -276,7 +276,7 @@
 <!-- End tldr -->
 
 <!-- Paper abstract -->
-<section class="section hero is-dark">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -541,7 +541,7 @@
             During training, images are augmented with speckles, dropout, and stick noise (similar to <a href="https://arxiv.org/abs/2407.02274" target="_blank">DextrAH</a>). For evaluations, we also consider depth images augmented with the Kinect noise model.
           </h2>
         </div>
-        <div class="item">
+        <div class="item">  
           <!-- TODO: Add Figure 13 - DROID kitchen scenes -->
           <img src="static/images/droid_pca.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
@@ -713,9 +713,8 @@
               <th>Model</th>
               <th>Params</th>
               <th>FLOPs</th>
-              <th>RTX 4090 (ms)</th>
+              <th>RTX 4090 (ms) - BS 128</th>
               <th>Jetson Orin (ms)</th>
-              <th>Use Case</th>
             </tr>
           </thead>
           <tbody>
@@ -725,7 +724,6 @@
               <td>9962 G</td>
               <td>625</td>
               <td>72.8</td>
-              <td>Maximum accuracy, offline processing</td>
             </tr>
             <tr>
               <td><strong>ViT-S/14</strong></td>
@@ -733,7 +731,6 @@
               <td>707 G</td>
               <td>64</td>
               <td>11.9</td>
-              <td>Balanced performance & speed</td>
             </tr>
           </tbody>
         </table>
@@ -749,7 +746,6 @@
               <th>FLOPs</th>
               <th>RTX 4090 (ms)</th>
               <th>Jetson Orin (ms)</th>
-              <th>Use Case</th>
             </tr>
           </thead>
           <tbody>
@@ -759,7 +755,6 @@
               <td>631 G</td>
               <td>69</td>
               <td>17.8</td>
-              <td>Strong features, efficient training</td>
             </tr>
             <tr>
               <td><strong>ResNet-34</strong></td>
@@ -767,7 +762,6 @@
               <td>494 G</td>
               <td>33</td>
               <td>13.5</td>
-              <td>Good balance for mid-range hardware</td>
             </tr>
             <tr>
               <td><strong>ResNet-18</strong></td>
@@ -775,7 +769,6 @@
               <td>256 G</td>
               <td>21</td>
               <td>8.7</td>
-              <td>Lightweight, edge devices</td>
             </tr>
           </tbody>
         </table>
