@@ -253,9 +253,11 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
+/* CAROUSEL FIXES - CRITICAL FOR MOBILE */
 .results-carousel {
   overflow: hidden;
   padding: 1rem 0;
+  width: 100%;
 }
 
 .results-carousel .item {
@@ -268,6 +270,10 @@ body {
   box-shadow: var(--shadow-md);
   transition: var(--transition);
   border: 1px solid var(--border-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .results-carousel .item:hover {
@@ -276,11 +282,14 @@ body {
 }
 
 .results-carousel .item img,
-.results-carousel video {
+.results-carousel .item video {
   margin: 0;
   border-radius: var(--border-radius);
   width: 100%;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .results-carousel .subtitle {
@@ -288,6 +297,13 @@ body {
   color: var(--text-secondary);
   margin-top: 1rem;
   font-weight: 500;
+}
+
+/* Ensure all images and videos are responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Pagination and Misc Improvements */
@@ -609,19 +625,92 @@ code {
   }
   
   .publication-title {
-    font-size: 2.5rem !important;
+    font-size: 1.75rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1.5rem !important;
   }
   
   .publication-authors {
-    font-size: 1rem !important;
+    font-size: 0.85rem !important;
   }
   
   .button {
     margin: 0.25rem !important;
-    font-size: 0.875rem !important;
-    padding: 0.75rem 1rem !important;
+    font-size: 0.8rem !important;
+    padding: 0.6rem 0.8rem !important;
+  }
+  
+  /* CRITICAL MOBILE CAROUSEL FIXES */
+  .results-carousel {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  .results-carousel .item {
+    margin: 0.5rem !important;
+    padding: 1rem !important;
+    width: 100% !important;
+  }
+  
+  .results-carousel .item img,
+  .results-carousel .item video {
+    max-height: 60vh !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+  
+  .carousel-nav-left,
+  .carousel-nav-right {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  /* Fix all images and videos on mobile */
+  img, video {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  
+  .content img {
+    margin: 1rem auto !important;
+  }
+  
+  /* Table scrolling */
+  .table-container,
+  .box .content {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table {
+    font-size: 0.7rem !important;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.4rem 0.2rem !important;
+    white-space: nowrap;
+  }
+  
+  .contribution-box h3 {
+    font-size: 0.95rem !important;
+  }
+  
+  .contribution-box p {
+    font-size: 0.85rem !important;
+  }
+  
+  .title.is-3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .title.is-4 {
+    font-size: 1.25rem !important;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem !important;
   }
   
   .more-works-container {
@@ -642,23 +731,27 @@ code {
     top: auto;
   }
   
-  .results-carousel .item {
-    margin: 0.5rem;
-    padding: 1rem;
-  }
-  
   .teaser .hero-body {
     padding: 1rem;
   }
   
   .content.has-text-justified {
     font-size: 1rem;
+    text-align: left !important;
+  }
+  
+  .section {
+    padding: 1.5rem 0.75rem !important;
+  }
+  
+  .box {
+    padding: 0.75rem !important;
   }
 }
 
 @media screen and (max-width: 480px) {
   .publication-title {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
   
   .hero-body {
