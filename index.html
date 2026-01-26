@@ -463,11 +463,12 @@
       <h2 class="title is-3">Navigation: Embodiment-Aware Long-Range Navigation</h2>
       <div id="navigation-carousel" class="carousel results-carousel">
         <div class="item">
-          <!-- TODO: Add Figure 7 - Training and test environments -->
-          <img src="static/images/nav_environments.png" alt="Navigation training and test environments" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Training environment (maze-based) vs. realistic test environments: Industrial Hangar, Abandoned Cable, Modern City Downtown.
-          </h2>
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/DeFM_navigation_sim.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                DeFM learns powerful features for navigation and is better at avoiding odd obstacles such as lamp-posts, traffic signs and fences compared to DINOv3 and VAE baselines.
+              </h2>
         </div>
         <div class="item">
           <!-- TODO: Add Figure 9 - Real-world deployments (4 panels) -->
