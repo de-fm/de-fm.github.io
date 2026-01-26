@@ -258,8 +258,25 @@
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
+<!-- Start tldr -->
 <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">tl;dr</h2>
+        <div class="content has-text-justified">
+          <p>
+            A DINO-style encoder, but for depth image inputs. Works on diverse robotics tasks without task-specific finetuning. Ready-to-use open-source models ranging from 3M to 300M parameters.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End tldr -->
+
+<!-- Paper abstract -->
+<section class="section hero is-dark">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -275,22 +292,6 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Start tldr -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">tl;dr</h2>
-        <div class="content has-text-justified">
-          <p>
-            A DINO-style encoder, but for depth image inputs. Works on diverse robotics tasks without task-specific finetuning.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End tldr -->
 
 <!-- Key Contributions -->
 <section class="section hero">
@@ -486,19 +487,18 @@
                 Robot deployment in Park environment navigating a waypoint at 100 meters. The navigation policy utilizing DeFM features achieves robust sim-to-real transfer.
               </h2>
         </div>
-        <div class="item">
-          <!-- TODO: Add Figure 8 as infographic - Failure analysis -->
+        <!-- <div class="item">
           <img src="static/images/nav_failures.png" alt="Navigation failure analysis" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             DeFM reduces collision failures compared to baselines, especially in out-of-distribution environments.
           </h2>
-        </div>
+        </div> -->
       </div>
       
       <!-- Navigation Stats -->
       <div class="box" style="margin-top: 2rem; background-color: #f0f7ff;">
         <h3 class="title is-4 has-text-centered">Navigation Performance</h3>
-        <div class="columns is-multiline has-text-centered">
+        <!-- <div class="columns is-multiline has-text-centered">
           <div class="column is-one-third">
             <p class="heading">Habitat PointGoal (Gibson Val)</p>
             <p class="title is-4">88.4% SPL</p>
@@ -511,7 +511,7 @@
             <p class="heading">OOD Environments (Avg)</p>
             <p class="title is-4">84.3% SR</p>
           </div>
-        </div>
+        </div> -->
         <p class="has-text-centered" style="margin-top: 1rem;">
           <strong>Key Insight:</strong> DeFM works out-of-the-box without task-specific depth preprocessing, achieving robust sim-to-real transfer and reducing collision failures in novel environments.
         </p>
@@ -528,31 +528,25 @@
       <h2 class="title is-3">Manipulation: Dexterous Grasping</h2>
       <div id="manipulation-carousel" class="carousel results-carousel">
         <div class="item">
-          <!-- TODO: Add Figure 11 - Grasp rollout sequence -->
-          <img src="static/images/manip_rollout.png" alt="Dexterous grasping rollout sequence" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Kuka-Allegro arm-hand executing successful grasps of diverse objects using depth-only observations.
-          </h2>
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/DeFM_manipulation_text.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+                Our Frozen DeFM encoder outperforms a finetuned Imagenet encoder and a CNN encoder trained from scratch. We achieve competitive performance with a finetuned Dinov3 encoder. On finetuning our DeFM encoder, we outperform all baselines by 9 percent.
+              </h2>
         </div>
         <div class="item">
           <!-- TODO: Add Figure 12 - Different noise models -->
-          <img src="static/images/manip_noise.png" alt="Depth images under different noise models" loading="lazy"/>
+          <img src="static/images/dextrah_depth_noise.png" alt="Depth images under different noise models" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
-            Training with augmented depth (speckles, dropout) vs. evaluation with realistic Kinect noise model.
+            During training, images are augmented with speckles, dropout, and stick noise (similar to [DEXTRAH](https://arxiv.org/abs/2407.02274)). For evaluations, we also consider depth images augmented with the Kinect noise model.
           </h2>
         </div>
         <div class="item">
-          <!-- TODO: Create infographic from Table IX -->
-          <img src="static/images/manip_results_table.png" alt="Manipulation performance comparison" loading="lazy"/>
+          <!-- TODO: Add Figure 13 - DROID kitchen scenes -->
+          <img src="static/images/droid_pca.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
-            Fine-tuned DeFM achieves 89.4% success rate (normalized to teacher), with best robustness to sensor noise.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Add Figure 13 - PCA on manipulation scenes -->
-          <img src="static/images/manip_pca.png" alt="PCA features on manipulation scenes" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            PCA on real DROID dataset scenes shows clear separation of countertops, robot arms, and graspable objects.
+            Complex kitchen scenes show clear clustering: countertops, background surfaces, robot arms, and manipulable objects each have distinct features.
           </h2>
         </div>
       </div>
@@ -560,7 +554,7 @@
       <!-- Manipulation Stats -->
       <div class="box" style="margin-top: 2rem; background-color: #fff7ed;">
         <h3 class="title is-4 has-text-centered">Dexterous Grasping Performance</h3>
-        <div class="columns is-multiline has-text-centered">
+        <!-- <div class="columns is-multiline has-text-centered">
           <div class="column is-one-third">
             <p class="heading">Success Rate (Fine-tuned)</p>
             <p class="title is-4">89.4%</p>
@@ -574,9 +568,9 @@
             <p class="title is-4">12% drop</p>
             <p class="subtitle is-6">(vs 28% for baselines)</p>
           </div>
-        </div>
+        </div> -->
         <p class="has-text-centered" style="margin-top: 1rem;">
-          <strong>Key Insight:</strong> DeFM features remain stable across sensor noise variations, with frozen encoder achieving 80.9% success and only 12% performance drop under novel Kinect noise.
+          <strong>Key Insight:</strong> DeFM features remain stable across sensor noise variations, with frozen encoder outperforming all frozen baselines by 23% (including DINOv3) and fine-tuned DeFM outperforming all baselines by 9%. 
         </p>
       </div>
     </div>
@@ -591,24 +585,18 @@
       <h2 class="title is-3">Locomotion: Quadruped Ladder Climbing</h2>
       <div id="locomotion-carousel" class="carousel results-carousel">
         <div class="item">
-          <!-- TODO: Add Figure 14 - ANYmal on ladder -->
-          <img src="static/images/loco_anymal.png" alt="ANYmal climbing ladder with depth visualization" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            ANYmal quadruped climbing ladder using four depth cameras for foothold placement and gait synchronization.
-          </h2>
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/DeFM_ladder_final.mp4" type="video/mp4">
+              </video>
+              <h2 class="subtitle has-text-centered">
+               We match the performance to training a CNN baseline from scratch highlighting the generalizability of our features.
+              </h2>
         </div>
         <div class="item">
-          <!-- TODO: Add Figure 15 - Real-world PCA -->
-          <img src="static/images/loco_pca.png" alt="PCA visualization of ladder structure in real deployment" loading="lazy"/>
+          <!-- TODO: Add Figure 15 - Ladder climbing PCA -->
+          <img src="static/images/ladder_pca.png" alt="PCA visualization of ladder structure from real deployment" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
-            Real-world deployment: PCA reveals consistent ladder structure features despite heavy stereo camera noise.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Create visualization of tested configurations -->
-          <img src="static/images/loco_configs.png" alt="Grid of tested ladder configurations" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Evaluated across varying ladder angles (70°-90°, 5° increments) and rung radii (15-45mm, 5mm increments).
+            Real-world ladder climbing: DeFM consistently assigns similar features to ladder structures despite heavy sensor noise.
           </h2>
         </div>
       </div>
@@ -616,7 +604,7 @@
       <!-- Locomotion Stats -->
       <div class="box" style="margin-top: 2rem; background-color: #f0fdf4;">
         <h3 class="title is-4 has-text-centered">Ladder Climbing Performance</h3>
-        <div class="columns is-multiline has-text-centered">
+        <!-- <div class="columns is-multiline has-text-centered">
           <div class="column is-one-third">
             <p class="heading">Overall Success Rate</p>
             <p class="title is-4">90.1%</p>
@@ -629,9 +617,9 @@
             <p class="heading">Rung Radius Range</p>
             <p class="title is-4">15-45mm</p>
           </div>
-        </div>
+        </div> -->
         <p class="has-text-centered" style="margin-top: 1rem;">
-          <strong>Key Insight:</strong> Frozen DeFM matches scratch-trained baseline (90.45%) with zero task-specific pretraining, while demonstrating better noise robustness for sim-to-real transfer.
+          <strong>Key Insight:</strong> Frozen DeFM matches scratch-trained baseline (90.45%) without task-specific finetuning, while demonstrating noise robustness on real-world PCA analysis.
         </p>
       </div>
     </div>
@@ -977,20 +965,24 @@
 </section>
 <!--End BibTex citation -->
 
-<footer class="footer">
+  <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
+
         </div>
       </div>
     </div>
   </div>
 </footer>
+
 
 </main>
 </body>
