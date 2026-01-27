@@ -410,6 +410,7 @@
       </div>
     </div>
   </div>
+  </div>
 </section>
 <!-- End Method Overview Carousel -->
 
@@ -618,7 +619,7 @@
       </div>
       
   <!-- Locomotion Stats -->
-  <div class="box" style="margin-top: 2rem; background-color: #f0fdf4;">
+    <div class="box" style="margin-top: 2rem; background-color: #f0fdf4;">
         <h3 class="title is-4 has-text-centered">Ladder Climbing Performance</h3>
         <!-- <div class="columns is-multiline has-text-centered">
           <div class="column is-one-third">
@@ -642,75 +643,81 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 <!-- End Locomotion -->
 
 <!-- Segmentation Results -->
 <section class="section hero">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Dense Prediction: Semantic Segmentation</h2>
-    <div class="content has-text-centered">
-      <!-- TODO: Add Figure 6 - Qualitative segmentation comparisons -->
-      <img src="static/images/segmentation_vits.png" alt="Segmentation results across 5 datasets" style="max-width: 100%; height: auto;"/>
-      <p class="has-text-justified" style="margin-top: 1rem;">
-        <strong>Qualitative Results:</strong> DeFM-S/14 significantly outperforms DINOv3-S/16 on diverse segmentation tasks spanning indoor (ScanNet, SUN-RGBD), outdoor (OFFSED, TartanGround), and manipulation (GraspNet-1B) domains.
-      </p>
-    </div>
-    
-    <!-- TODO: Create infographic from Table V -->
-    <div class="box" style="margin-top: 2rem; background-color: #faf5ff;">
-      <h3 class="title is-4 has-text-centered">Segmentation Performance (mIoU)</h3>
-      <div class="content">
-        <div style="overflow-x: auto;"></div>
-        <table class="table is-striped is-fullwidth">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>ScanNet</th>
-              <th>SUN-RGBD</th>
-              <th>OFFSED</th>
-              <th>TartanGround</th>
-              <th>GraspNet-1B</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>DeFM ViT-L/14</strong></td>
-              <td><strong>31.34</strong></td>
-              <td>31.26</td>
-              <td><strong>57.62</strong></td>
-              <td><strong>67.69</strong></td>
-              <td><strong>27.85</strong></td>
-            </tr>
-            <tr>
-              <td>DINOv3 ViT-L/16</td>
-              <td>28.52</td>
-              <td><strong>32.74</strong></td>
-              <td>54.42</td>
-              <td>62.16</td>
-              <td>23.89</td>
-            </tr>
-            <tr>
-              <td><strong>DeFM ViT-S/14</strong></td>
-              <td><strong>27.69</strong></td>
-              <td><strong>27.78</strong></td>
-              <td><strong>57.35</strong></td>
-              <td><strong>64.66</strong></td>
-              <td><strong>19.89</strong></td>
-            </tr>
-            <tr>
-              <td>DINOv3 ViT-S/16</td>
-              <td>20.05</td>
-              <td>18.42</td>
-              <td>56.32</td>
-              <td>56.97</td>
-              <td>14.87</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="has-text-centered" style="margin-top: 1rem;">
-          <strong>Key Result:</strong> DeFM achieves state-of-the-art on 4/5 datasets. DeFM-S/14 shows up to 30% mIoU improvement over similar-sized baselines, demonstrating the critical need for depth-specific efficient foundation models.
-        </p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Dense Prediction: Semantic Segmentation</h2>
+        <div class="content has-text-centered">
+          <!-- TODO: Add Figure 6 - Qualitative segmentation comparisons -->
+          <figure class="image">
+            <img src="static/images/segmentation_vits.png" alt="Segmentation results across 5 datasets" style="max-width: 100%; height: auto;"/>
+          </figure>
+          <p class="has-text-justified" style="margin-top: 1rem;">
+            <strong>Qualitative Results:</strong> DeFM-S/14 significantly outperforms DINOv3-S/16 on diverse segmentation tasks spanning indoor (ScanNet, SUN-RGBD), outdoor (OFFSED, TartanGround), and manipulation (GraspNet-1B) domains.
+          </p>
+        </div>
+
+        <!-- TODO: Create infographic from Table V -->
+        <div class="box" style="margin-top: 2rem; background-color: #faf5ff;">
+          <h3 class="title is-4 has-text-centered">Segmentation Performance (mIoU)</h3>
+          <div class="content">
+            <div style="overflow-x: auto;">
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>ScanNet</th>
+                  <th>SUN-RGBD</th>
+                  <th>OFFSED</th>
+                  <th>TartanGround</th>
+                  <th>GraspNet-1B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>DeFM ViT-L/14</strong></td>
+                  <td><strong>31.34</strong></td>
+                  <td>31.26</td>
+                  <td><strong>57.62</strong></td>
+                  <td><strong>67.69</strong></td>
+                  <td><strong>27.85</strong></td>
+                </tr>
+                <tr>
+                  <td>DINOv3 ViT-L/16</td>
+                  <td>28.52</td>
+                  <td><strong>32.74</strong></td>
+                  <td>54.42</td>
+                  <td>62.16</td>
+                  <td>23.89</td>
+                </tr>
+                <tr>
+                  <td><strong>DeFM ViT-S/14</strong></td>
+                  <td><strong>27.69</strong></td>
+                  <td><strong>27.78</strong></td>
+                  <td><strong>57.35</strong></td>
+                  <td><strong>64.66</strong></td>
+                  <td><strong>19.89</strong></td>
+                </tr>
+                <tr>
+                  <td>DINOv3 ViT-S/16</td>
+                  <td>20.05</td>
+                  <td>18.42</td>
+                  <td>56.32</td>
+                  <td>56.97</td>
+                  <td>14.87</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <p class="has-text-centered" style="margin-top: 1rem;">
+              <strong>Key Result:</strong> DeFM achieves state-of-the-art on 4/5 datasets. DeFM-S/14 shows up to 30% mIoU improvement over similar-sized baselines, demonstrating the critical need for depth-specific efficient foundation models.
+            </p>
+          </div>
         </div>
       </div>
     </div>
