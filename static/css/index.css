@@ -759,3 +759,17 @@ a:focus {
   height: 100%;
   width: 100%;
 }
+
+/* Mobile-specific fixes: ensure videos and carousel items don't create large overflow/spacing on small screens */
+.results-carousel .item video,
+.publication-banner video,
+.publication-video video,
+.results-carousel video {
+  max-width: 100%;
+  height: auto !important;
+  display: block;
+}
+
+.carousel {
+  overflow: hidden;
+}
