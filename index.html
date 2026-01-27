@@ -247,7 +247,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with actual teaser video showing all tasks -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
+  <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
         <source src="static/videos/DeFM_video_v3.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -268,11 +268,10 @@
           <p>
             A DINO-style encoder, but for depth image inputs. Works on diverse robotics tasks without task-specific finetuning. Ready-to-use open-source models ranging from 3M to 300M parameters.
           </p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+  </section>
 <!-- End tldr -->
 
 <!-- Paper abstract -->
@@ -343,8 +342,10 @@
       <p class="has-text-justified" style="margin-top: 1rem;">
        <strong>DeFM Overview:</strong>  We present DeFM, a foundation model for depth images. Pretrained using DINOv2 style self-distillation method (III) on a curated depth dataset of 60 M images (II), DeFM features achieve state-of-the-art results across several classification and semantic segmentation benchmarks (linear probing) (I). Features obtained from DeFM reveal semantic awareness upon performing PCA despite depth lacking texture and color (V). We distill our largest DeFM model into several efficient CNN networks (IV) to be used for various downstream robotic Reinforcement Learning tasks, including navigation, manipulation, and locomotion (VI).
       </p>
+      </div>
     </div>
-<!-- End Method Overview -->
+  </section>
+  <!-- End Method Overview -->
 
 <!-- Method Overview -->
 <!-- <section class="section hero is-light">
@@ -380,7 +381,7 @@
     <div class="container">
       <h2 class="title is-3">Method Overview</h2>
       <p class="subtitle"></p>
-      <div id="semantic-carousel" class="carousel results-carousel">
+  <div id="method-carousel" class="carousel results-carousel">
         <div class="item">
           <!-- TODO: Add Figure 5 - PCA on cups from different sensors -->
           <img src="static/images/self_distillation.png" alt="" loading="lazy"/>
@@ -464,7 +465,7 @@
       <h2 class="title is-3">Navigation: Embodiment-Aware Long-Range Navigation</h2>
       <div id="navigation-carousel" class="carousel results-carousel">
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
+          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_navigation_sim.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -472,7 +473,7 @@
               </h2>
         </div>
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
+          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_nav_realworld.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -480,7 +481,7 @@
               </h2>
         </div>
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
+          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_nav_realworld_long.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -528,7 +529,7 @@
       <h2 class="title is-3">Manipulation: Dexterous Grasping</h2>
       <div id="manipulation-carousel" class="carousel results-carousel">
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
+          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_manipulation_text.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
@@ -584,7 +585,7 @@
       <h2 class="title is-3">Locomotion: Quadruped Ladder Climbing</h2>
       <div id="locomotion-carousel" class="carousel results-carousel">
         <div class="item">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata" playsinline>
+          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
             <source src="static/videos/DeFM_ladder_final.mp4" type="video/mp4">
               </video>
               <h2 class="subtitle has-text-centered">
