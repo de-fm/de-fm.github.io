@@ -84,21 +84,21 @@
   ]
  },
  {
-  "id": "lounge",
-  "title": "Lounge with a round table",
-  "source": "ScanNet (Structure Sensor depth)",
-  "depth": "sensor",
+  "id": "garbage_truck",
+  "title": "Garbage truck",
+  "source": "ImageNet photo \u2192 Depth Anything V2",
+  "depth": "dav2",
   "rgb": true,
   "group": null,
-  "bg": null,
+  "bg": 0.5,
   "invert": false,
   "grid": [
-   35,
+   34,
    46
   ],
   "k": 64,
-  "scale": 0.006049570177203923,
-  "energy": 0.963,
+  "scale": 0.005359769088494643,
+  "energy": 0.957,
   "size": [
    480,
    640
@@ -426,7 +426,7 @@
   "depth": "sensor",
   "rgb": true,
   "group": null,
-  "bg": 0.5,
+  "bg": null,
   "invert": false,
   "grid": [
    35,

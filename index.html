@@ -39,10 +39,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=20261023">
+  <link rel="stylesheet" href="static/css/index.css?v=20261023b">
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/index.js?v=20261023"></script>
-  <script defer src="static/js/pca_explorer.js?v=20261023"></script>
+  <script defer src="static/js/index.js?v=20261023b"></script>
+  <script defer src="static/js/pca_explorer.js?v=20261023b"></script>
 
   <script type="application/ld+json">
   {
@@ -77,9 +77,9 @@
     <a href="#top" class="brand">DeFM</a>
     <div class="nav-links" id="navLinks">
       <a href="#overview">Overview</a>
+      <a href="#explore">Explorer</a>
       <a href="#method">Method</a>
       <a href="#semantics">Semantics</a>
-      <a href="#explore">Explorer</a>
       <a href="#results">Benchmarks</a>
       <a href="#robotics">Robotics</a>
       <a href="#models">Models</a>
@@ -190,6 +190,76 @@
       which can be adopted off-the-shelf for depth-based robot learning.
     </p>
 
+  </div>
+</section>
+
+<!-- Interactive PCA explorer -->
+<section class="section explore" id="explore">
+  <div class="wrap">
+    <h2 class="section-title">Explore DeFM features</h2>
+    <p class="lead">DeFM-L/14 patch features on real sensor depth (robot cameras, ScanNet, GraspNet-1B, Middlebury) and on
+      depth estimated from photos with Depth Anything V2. Hover over an image to see which patches DeFM considers similar
+      to the one under the cursor.</p>
+
+    <div class="xp-filters" id="xpFilters">
+      <button class="chip is-active" data-filter="all">All</button>
+      <button class="chip" data-filter="sensor">Sensor depth</button>
+      <button class="chip" data-filter="dav2">Depth from RGB (DAv2)</button>
+    </div>
+    <div class="xp-thumbs" id="xpThumbs" role="listbox" aria-label="Samples"></div>
+
+    <div class="xp-viewer">
+      <figure class="xp-panel">
+        <div class="xp-stage" id="xpInputStage">
+          <img id="xpInput" alt="">
+          <span class="xp-marker" id="xpMarkerIn"></span>
+        </div>
+        <figcaption>
+          <span id="xpInputLabel">Input</span>
+          <span class="xp-toggle" id="xpInputToggle">
+            <button class="is-active" data-view="rgb">RGB</button><button data-view="depth">Depth</button>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="xp-panel">
+        <div class="xp-stage" id="xpFeatStage">
+          <img id="xpPca" alt="PCA of DeFM patch features">
+          <canvas id="xpSim" class="xp-hidden"></canvas>
+          <span class="xp-marker" id="xpMarkerFeat"></span>
+        </div>
+        <figcaption>
+          <span id="xpFeatLabel">PCA of patch features</span>
+          <span class="xp-legend xp-hidden" id="xpLegend"><span>less similar</span><i></i><span>more similar</span></span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="xp-info">
+      <div>
+        <h3 id="xpTitle"></h3>
+        <p id="xpMeta"></p>
+      </div>
+      <div class="xp-controls">
+        <a class="btn" id="xpTryOwn" href="#" target="_blank" rel="noopener"><i class="fas fa-upload"></i> Try your own image</a>
+      </div>
+    </div>
+    <div class="xp-demo" id="xpDemo" hidden>
+      <div class="xp-demo-head">
+        <span>Upload a depth image or a photo. Runs on a Hugging Face Space (shared GPU, CPU fallback); the first load can
+          take a minute if the Space is asleep.</span>
+        <a id="xpDemoOpen" href="#" target="_blank" rel="noopener">Open in a new tab <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <iframe id="xpDemoFrame" title="DeFM feature PCA demo" allow="clipboard-write"></iframe>
+    </div>
+    <p class="xp-note">Features are averaged over half-patch shifts and a horizontal flip (7-px grid) and upsampled smoothly; similarity uses a rank-64 projection of the 1024-d patch features (cosine). The background
+      of some samples is removed by thresholding the first principal component. Image credits: Middlebury 2014
+      (Scharstein et al.), ScanNet (Dai et al.), GraspNet-1Billion (Fang et al.), ImageNet (Deng et al.).</p>
+  </div>
+</section>
+
+<!-- Overview figure + highlights -->
+<section class="section" id="highlights">
+  <div class="wrap">
     <figure class="figure">
       <img src="static/images/defm_overview.png" alt="DeFM overview: benchmark performance, curated depth dataset, self-distillation, CNN distillation, semantic awareness and robotic tasks" loading="lazy" data-zoom>
       <figcaption>
@@ -297,70 +367,6 @@
       <figure class="span-2"><img src="static/images/ladder_pca.png" alt="PCA of ladder during real deployment" loading="lazy" data-zoom>
         <figcaption>Real ladder-climbing deployment: the ladder gets consistent features despite heavy stereo noise.</figcaption></figure>
     </div>
-  </div>
-</section>
-
-<!-- Interactive PCA explorer -->
-<section class="section explore" id="explore">
-  <div class="wrap">
-    <h2 class="section-title">Explore DeFM features</h2>
-    <p class="lead">DeFM-L/14 patch features on real sensor depth (robot cameras, ScanNet, GraspNet-1B, Middlebury) and on
-      depth estimated from photos with Depth Anything V2. Hover over an image to see which patches DeFM considers similar
-      to the one under the cursor.</p>
-
-    <div class="xp-filters" id="xpFilters">
-      <button class="chip is-active" data-filter="all">All</button>
-      <button class="chip" data-filter="sensor">Sensor depth</button>
-      <button class="chip" data-filter="dav2">Depth from RGB (DAv2)</button>
-    </div>
-    <div class="xp-thumbs" id="xpThumbs" role="listbox" aria-label="Samples"></div>
-
-    <div class="xp-viewer">
-      <figure class="xp-panel">
-        <div class="xp-stage" id="xpInputStage">
-          <img id="xpInput" alt="">
-          <span class="xp-marker" id="xpMarkerIn"></span>
-        </div>
-        <figcaption>
-          <span id="xpInputLabel">Input</span>
-          <span class="xp-toggle" id="xpInputToggle">
-            <button class="is-active" data-view="rgb">RGB</button><button data-view="depth">Depth</button>
-          </span>
-        </figcaption>
-      </figure>
-      <figure class="xp-panel">
-        <div class="xp-stage" id="xpFeatStage">
-          <img id="xpPca" alt="PCA of DeFM patch features">
-          <canvas id="xpSim" class="xp-hidden"></canvas>
-          <span class="xp-marker" id="xpMarkerFeat"></span>
-        </div>
-        <figcaption>
-          <span id="xpFeatLabel">PCA of patch features</span>
-          <span class="xp-legend xp-hidden" id="xpLegend"><span>less similar</span><i></i><span>more similar</span></span>
-        </figcaption>
-      </figure>
-    </div>
-
-    <div class="xp-info">
-      <div>
-        <h3 id="xpTitle"></h3>
-        <p id="xpMeta"></p>
-      </div>
-      <div class="xp-controls">
-        <a class="btn" id="xpTryOwn" href="#" target="_blank" rel="noopener"><i class="fas fa-upload"></i> Try your own image</a>
-      </div>
-    </div>
-    <div class="xp-demo" id="xpDemo" hidden>
-      <div class="xp-demo-head">
-        <span>Upload a depth image or a photo. Runs on a Hugging Face Space (shared GPU, CPU fallback); the first load can
-          take a minute if the Space is asleep.</span>
-        <a id="xpDemoOpen" href="#" target="_blank" rel="noopener">Open in a new tab <i class="fas fa-external-link-alt"></i></a>
-      </div>
-      <iframe id="xpDemoFrame" title="DeFM feature PCA demo" allow="clipboard-write"></iframe>
-    </div>
-    <p class="xp-note">Features are averaged over half-patch shifts and a horizontal flip (7-px grid) and upsampled smoothly; similarity uses a rank-64 projection of the 1024-d patch features (cosine). The background
-      of some samples is removed by thresholding the first principal component. Image credits: Middlebury 2014
-      (Scharstein et al.), ScanNet (Dai et al.), GraspNet-1Billion (Fang et al.), ImageNet (Deng et al.).</p>
   </div>
 </section>
 
