@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="DeFM: Learning Foundation Representations from Depth for Robotics">
-  <meta name="description" content="DeFM is a self-supervised foundation model trained on 60M depth images, providing robust geometric and semantic features for robotic locomotion, navigation, and manipulation.">
-  <meta name="keywords" content="DeFM, Robotics, Foundation Models, Depth Perception, Self-Supervised Learning, Computer Vision, ETH Zurich, DINOv2, Navigation, Manipulation, Locomotion">
+
+  <title>DeFM: Learning Foundation Representations from Depth for Robotics</title>
+  <meta name="description" content="DeFM is a self-supervised foundation model trained on 60M depth images, providing robust geometric and semantic features for robotic locomotion, navigation, and manipulation. Accepted to IEEE Transactions on Robotics (T-RO).">
+  <meta name="keywords" content="DeFM, Robotics, Foundation Models, Depth Perception, Self-Supervised Learning, ETH Zurich, DINOv2, Navigation, Manipulation, Locomotion, IEEE T-RO">
   <meta name="author" content="Manthan Patel, Jonas Frey, Mayank Mittal, Fan Yang, Alexander Hansson, Amir Bar, Cesar Cadena, Marco Hutter">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
+  <meta name="theme-color" content="#1e2a3a">
 
-  <!-- Academic/Research Specific -->
+  <!-- Google Scholar -->
   <meta name="citation_title" content="DeFM: Learning Foundation Representations from Depth for Robotics">
   <meta name="citation_author" content="Patel, Manthan">
   <meta name="citation_author" content="Frey, Jonas">
@@ -22,89 +21,49 @@
   <meta name="citation_author" content="Bar, Amir">
   <meta name="citation_author" content="Cadena, Cesar">
   <meta name="citation_author" content="Hutter, Marco">
-  <meta name="citation_publication_date" content="2025">
-  <meta name="citation_conference_title" content="Under Review">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="IEEE Transactions on Robotics">
+  <meta name="citation_arxiv_id" content="2601.18923">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2601.18923">
+
+  <!-- Social previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DeFM: Learning Foundation Representations from Depth for Robotics">
+  <meta property="og:description" content="A DINO-style foundation model for depth images. Accepted to IEEE T-RO.">
+  <meta property="og:url" content="https://de-fm.github.io/">
+  <meta property="og:image" content="https://de-fm.github.io/static/images/defm_overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/x-icon" href="static/images/rsl_logo.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <title>DeFM: Learning Foundation Representations from Depth for Robotics</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/rsl_logo.ico">
-  <link rel="apple-touch-icon" href="static/images/rsl_logo.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+  <script defer src="static/js/pca_explorer.js"></script>
 
-  <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "DeFM: Learning Foundation Representations from Depth for Robotics",
-    "description": "A self-supervised foundation model trained on 60M depth images for robotic applications, achieving state-of-the-art performance across navigation, manipulation, and locomotion tasks.",
+    "description": "A self-supervised foundation model trained on 60M depth images for robotic applications.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "Manthan Patel",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "ETH Zurich"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Jonas Frey",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "ETH Zurich"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Mayank Mittal",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "ETH Zurich"
-        }
-      }
+      {"@type": "Person", "name": "Manthan Patel"},
+      {"@type": "Person", "name": "Jonas Frey"},
+      {"@type": "Person", "name": "Mayank Mittal"},
+      {"@type": "Person", "name": "Fan Yang"},
+      {"@type": "Person", "name": "Alexander Hansson"},
+      {"@type": "Person", "name": "Amir Bar"},
+      {"@type": "Person", "name": "Cesar Cadena"},
+      {"@type": "Person", "name": "Marco Hutter"}
     ],
-    "datePublished": "2025-01-01",
+    "isPartOf": {"@type": "Periodical", "name": "IEEE Transactions on Robotics"},
+    "datePublished": "2026",
+    "url": "https://de-fm.github.io/",
+    "sameAs": "https://arxiv.org/abs/2601.18923",
     "keywords": ["depth perception", "foundation models", "robotics", "self-supervised learning", "navigation", "manipulation", "locomotion"],
     "isAccessibleForFree": true
   }
@@ -112,895 +71,504 @@
 </head>
 <body>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from RSL</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
+<!-- Top navigation -->
+<nav class="topnav" id="topnav">
+  <div class="topnav-inner">
+    <a href="#top" class="brand">DeFM</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#overview">Overview</a>
+      <a href="#method">Method</a>
+      <a href="#semantics">Semantics</a>
+      <a href="#explore">Explorer</a>
+      <a href="#results">Benchmarks</a>
+      <a href="#robotics">Robotics</a>
+      <a href="#models">Models</a>
+      <a href="#citation">Cite</a>
+    </div>
+    <div class="nav-right">
+      <div class="more-works">
+        <button class="more-works-btn" type="button" aria-expanded="false" aria-controls="moreWorks">
+          More from RSL <i class="fas fa-chevron-down"></i>
         </button>
+        <div class="more-works-menu" id="moreWorks">
+          <a href="https://rangenav.github.io/" target="_blank" rel="noopener">
+            <strong>RangeNav</strong><span>Task-aligned LiDAR range-image pretraining for robot navigation.</span><em>arXiv 2026</em>
+          </a>
+          <a href="https://leggedrobotics.github.io/wildos/" target="_blank" rel="noopener">
+            <strong>WildOS</strong><span>Open-vocabulary object search in the wild with a sparse spatial memory and vision foundation models.</span><em>T-FR 2026</em>
+          </a>
+          <a href="https://leggedrobotics.github.io/navitrace_webpage/" target="_blank" rel="noopener">
+            <strong>NaviTrace</strong><span>A benchmark for evaluating embodied navigation of vision-language models with 2D path traces.</span><em>ICRA 2026</em>
+          </a>
+          <a href="https://tartanair.org/tartanground/" target="_blank" rel="noopener">
+            <strong>TartanGround</strong><span>A large-scale dataset for ground robot perception and navigation in diverse environments.</span><em>IROS 2025</em>
+          </a>
+          <a href="https://leggedrobotics.github.io/roadrunner_mm/" target="_blank" rel="noopener">
+            <strong>RoadRunner M&amp;M</strong><span>Multi-range, multi-resolution traversability maps for high-speed off-road navigation.</span><em>RA-L 2024</em>
+          </a>
+        </div>
       </div>
-      <div class="works-list">
-        <a href="https://leggedrobotics.github.io/navitrace_webpage/" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>NaviTrace</h5>
-            <p>Visual navigation and locomotion with tracking and mapping for enhanced spatial awareness.</p>
-            <span class="work-venue">Arxiv 2025</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://tartanair.org/tartanground/" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>TartanGround</h5>
-            <p>A large-scale dataset for ground robot perception and navigation in diverse environments.</p>
-            <span class="work-venue">IROS 2025</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://leggedrobotics.github.io/roadrunner_mm/" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>RoadRunner</h5>
-            <p>Multimodal perception for robust legged robot navigation in challenging terrains.</p>
-            <span class="work-venue">RA-L 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
+      <a class="nav-icon" href="https://github.com/leggedrobotics/defm" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><i class="fas fa-bars"></i></button>
     </div>
   </div>
+</nav>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">DeFM: Learning Foundation Representations from Depth for Robotics</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://manthan99.github.io/" target="_blank">Manthan Patel</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="https://jonasfrey96.github.io/" target="_blank">Jonas Frey</a><sup>1,2,3</sup>,</span>
-              <span class="author-block">
-                <a href="https://mayankm96.github.io/" target="_blank">Mayank Mittal</a><sup>1,4</sup>,</span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=R3OeSRoAAAAJ&hl=en" target="_blank">Fan Yang</a><sup>1</sup>,</span>
-              <span class="author-block">
-                Alexander Hansson<sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="https://amirbar.net/" target="_blank">Amir Bar</a><sup>3</sup>,</span>
-              <span class="author-block">
-                <a href="https://mavt.ethz.ch/people/person-detail.cesar-cadena.html" target="_blank">Cesar Cadena</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="https://rsl.ethz.ch/the-lab/people/person-detail.hutter.html" target="_blank">Marco Hutter</a><sup>1</sup>
-              </span>
-            </div>
+<main id="top">
 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>ETH Zurich, <sup>2</sup>Stanford University, <sup>3</sup>UC Berkeley, <sup>4</sup>NVIDIA<br>Under Review</span>
-            </div>
+<!-- Hero -->
+<header class="hero">
+  <div class="wrap">
+    <a class="venue-badge" href="#citation">
+      <i class="fas fa-award"></i>
+      <span>Accepted to <strong class="badge-long">IEEE Transactions on Robotics (T-RO)</strong><strong class="badge-short">IEEE T-RO</strong></span>
+    </a>
+    <h1 class="title"><span class="title-key">DeFM</span>: Learning Foundation Representations from Depth for Robotics</h1>
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2601.18923v1" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
+    <div class="authors">
+      <span><a href="https://manthan99.github.io/" target="_blank" rel="noopener">Manthan Patel</a><sup>1</sup></span>
+      <span><a href="https://jonasfrey96.github.io/" target="_blank" rel="noopener">Jonas Frey</a><sup>2</sup></span>
+      <span><a href="https://mayankm96.github.io/" target="_blank" rel="noopener">Mayank Mittal</a><sup>1,3</sup></span>
+      <span><a href="https://scholar.google.com/citations?user=R3OeSRoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Fan Yang</a><sup>1</sup></span>
+      <span>Alexander Hansson<sup>1</sup></span>
+      <span><a href="https://amirbar.net/" target="_blank" rel="noopener">Amir Bar</a><sup>2</sup></span>
+      <span><a href="https://mavt.ethz.ch/people/person-detail.cesar-cadena.html" target="_blank" rel="noopener">Cesar Cadena</a><sup>1</sup></span>
+      <span><a href="https://rsl.ethz.ch/the-lab/people/person-detail.hutter.html" target="_blank" rel="noopener">Marco Hutter</a><sup>1</sup></span>
+    </div>
+    <div class="affiliations">
+      <span><sup>1</sup>Robotic Systems Lab, ETH Zurich</span>
+      <span><sup>2</sup>UC Berkeley</span>
+      <span><sup>3</sup>NVIDIA</span>
+    </div>
 
-            <span class="link-block">
-              <a href="https://github.com/leggedrobotics/defm" target="_blank"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fab fa-github"></i>
-              </span>
-              <span>Code</span>
-            </a>
-          </span>
-
-          <!-- TODO: Update with actual arXiv paper ID when available -->
-          <span class="link-block">
-            <a href="https://arxiv.org/abs/2601.18923v1" target="_blank"
-            class="external-link button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="ai ai-arxiv"></i>
-            </span>
-            <span>arXiv</span>
-          </a>
-        </span>
-
-        <span class="link-block">
-          <a href="https://huggingface.co/leggedrobotics/defm" target="_blank"
-            class="external-link button is-normal is-rounded is-dark">
-            <span class="icon">
-              <span>🤗</span>
-            </span>
-            <span>Hugging Face</span>
-          </a>
-        </span>
-      </div>
+    <div class="links">
+      <a class="btn" href="https://arxiv.org/pdf/2601.18923" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Paper</a>
+      <a class="btn" href="https://arxiv.org/abs/2601.18923" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> arXiv</a>
+      <a class="btn" href="https://github.com/leggedrobotics/defm" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+      <a class="btn" href="https://huggingface.co/leggedrobotics/defm" target="_blank" rel="noopener"><span aria-hidden="true">🤗</span> Models</a>
+      <a class="btn btn-ghost" href="#citation"><i class="fas fa-quote-right"></i> BibTeX</a>
     </div>
   </div>
-</div>
-</div>
-</div>
-</section>
+</header>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with actual teaser video showing all tasks -->
-  <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
+<!-- Teaser -->
+<section class="teaser">
+  <div class="wrap wide">
+    <div class="video-frame">
+      <video autoplay controls muted loop playsinline preload="metadata">
         <source src="static/videos/DeFM_video_v3.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        DeFM learns robust representations from depth images that transfer zero-shot across navigation, manipulation, and locomotion tasks, achieving state-of-the-art performance on diverse benchmarks.
-      </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
-<!-- Start tldr -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">tl;dr</h2>
-        <div class="content has-text-justified">
-          <p>
-            A DINO-style encoder, but for depth image inputs. Works on diverse robotics tasks without task-specific finetuning. Ready-to-use open-source models ranging from 3M to 300M parameters.
-          </p>
-          </div>
-        </div>
+<!-- TL;DR + key numbers -->
+<section class="section" id="overview">
+  <div class="wrap">
+    <p class="tldr"><span class="tldr-tag">tl;dr</span> A DINO-style encoder, but for depth images. One frozen backbone that works across
+      navigation, manipulation and locomotion &mdash; released as 12 ready-to-use models from 3M to 307M parameters.</p>
+
+    <div class="stats">
+      <div class="stat"><span class="stat-num">60.4M</span><span class="stat-label">depth images for pretraining</span></div>
+      <div class="stat"><span class="stat-num">18</span><span class="stat-label">real, synthetic &amp; MDE-derived datasets</span></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">released models, 3M&ndash;307M params</span></div>
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label">task families, frozen encoder</span></div>
+    </div>
+
+    <h2 class="section-title">Abstract</h2>
+    <p class="prose">
+      Depth sensors are widely deployed across robotic platforms, and advances in fast, high-fidelity depth simulation have enabled
+      robotic policies trained on depth observations to achieve robust sim-to-real transfer for a wide range of tasks. Despite this,
+      representation learning for depth modality remains underexplored compared to RGB, where large-scale foundation models now
+      define the state of the art. To address this gap, we present DeFM, a self-supervised foundation model trained entirely on
+      depth images for robotic applications. Using a DINO-style self-distillation objective on a curated dataset of 60M depth
+      images, DeFM learns geometric and semantic representations that generalize to diverse environments, tasks, and sensors. To
+      retain metric awareness across multiple scales, we introduce a novel input normalization strategy. We further distill DeFM
+      into compact models suitable for resource-constrained robotic systems. When evaluated on depth-based classification,
+      segmentation, navigation, locomotion, and manipulation, DeFM achieves state-of-the-art performance across several benchmarks
+      and demonstrates strong generalization from simulation to real-world environments. We release all our pretrained models,
+      which can be adopted off-the-shelf for depth-based robot learning.
+    </p>
+
+    <figure class="figure">
+      <img src="static/images/defm_overview.png" alt="DeFM overview: benchmark performance, curated depth dataset, self-distillation, CNN distillation, semantic awareness and robotic tasks" loading="lazy" data-zoom>
+      <figcaption>
+        <strong>Overview.</strong> Pretrained with DINOv2-style self-distillation (III) on a curated dataset of 60M depth images (II),
+        DeFM reaches state-of-the-art results on classification and semantic segmentation benchmarks (I). PCA of its features reveals
+        semantic awareness although depth lacks texture and color (V). We distill the largest model into efficient CNNs (IV) for
+        downstream reinforcement learning in navigation, manipulation and locomotion (VI).
+      </figcaption>
+    </figure>
+
+    <div class="cards">
+      <div class="card">
+        <span class="card-icon"><i class="fas fa-cube"></i></span>
+        <h3>Depth foundation model for robotics</h3>
+        <p>Self-supervised on 60M curated depth images; features generalize across environments, tasks and sensors.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon"><i class="fas fa-ruler-combined"></i></span>
+        <h3>Metric-aware input normalization</h3>
+        <p>A 3-channel log-compressed representation that keeps metric scale from millimeters (grasping) to 100&nbsp;m (navigation).</p>
+      </div>
+      <div class="card">
+        <span class="card-icon"><i class="fas fa-snowflake"></i></span>
+        <h3>Frozen, no task-specific tuning</h3>
+        <p>The same frozen encoder is used for classification, segmentation, navigation, manipulation and locomotion.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon"><i class="fas fa-microchip"></i></span>
+        <h3>Compact distilled models</h3>
+        <p>ViT-S, ResNet, RegNet and EfficientNet students down to 3M parameters, timed on an RTX 4090 and a Jetson AGX Orin.</p>
       </div>
     </div>
   </div>
 </section>
-<!-- End tldr -->
 
-<!-- Paper abstract -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Depth sensors are widely deployed across robotic platforms, and advances in fast, high-fidelity depth simulation have enabled robotic policies trained on depth observations to achieve robust sim-to-real transfer for a wide range of tasks. Despite this, representation learning for depth modality remains underexplored compared to RGB, where large-scale foundation models now define the state of the art. To address this gap, we present DeFM, a self-supervised foundation model trained entirely on depth images for robotic applications. Using a DINO-style self-distillation objective on a curated dataset of 60M depth images, DeFM learns geometric and semantic representations that generalize to diverse environments, tasks, and sensors. To retain metric awareness across multiple scales, we introduce a novel input normalization strategy. We further distill DeFM into compact models suitable for resource-constrained robotic systems. When evaluated on depth-based classification, segmentation, navigation, locomotion, and manipulation benchmarks, DeFM achieves state-of-the-art performance and demonstrates strong generalization from simulation to real-world environments.
-         </p>
-        </div>
+<!-- Method -->
+<section class="section alt" id="method">
+  <div class="wrap">
+    <h2 class="section-title">Method</h2>
+
+    <div class="feature">
+      <div class="feature-media"><img src="static/images/self_distillation.png" alt="DeFM self-distillation framework" loading="lazy" data-zoom></div>
+      <div class="feature-text">
+        <span class="kicker">01 &middot; Pretraining</span>
+        <h3>Self-distillation on depth</h3>
+        <p>DeFM uses a DINOv2-style objective with global and local crops. The student sees masked global crops and local crops and
+          learns to match the momentum teacher through DINO losses and iBOT patch-level supervision. We train a ViT-L/14 (307M) from scratch on depth.</p>
+      </div>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-media"><img src="static/images/input_norm_turbo.png" alt="Three-channel metric-aware depth normalization" loading="lazy" data-zoom></div>
+      <div class="feature-text">
+        <span class="kicker">02 &middot; Input</span>
+        <h3>Metric-aware normalization</h3>
+        <p>Log normalization captures the overall depth range while preserving fine near-field structure; plain metric normalization
+          gives weak contrast. Stacking a global log-scaled, a mid-range and a far-range channel keeps metric depth while staying robust
+          across domains.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-media"><img src="static/images/cnn_distillation.png" alt="Distillation of DeFM into CNNs with a BiFPN" loading="lazy" data-zoom></div>
+      <div class="feature-text">
+        <span class="kicker">03 &middot; Distillation</span>
+        <h3>Compact CNN students</h3>
+        <p>A BiFPN on top of the CNN backbone produces dense features supervised by the teacher's patch tokens, while the teacher's
+          class token supervises the pooled feature. This yields ResNet, RegNet and EfficientNet encoders ready for RL at large batch sizes.</p>
+      </div>
+    </div>
+
+    <div class="dataset">
+      <div class="dataset-head">
+        <span class="kicker">Pretraining data</span>
+        <h3>60.4M depth images from 18 datasets</h3>
+      </div>
+      <div class="mixbar" role="img" aria-label="Dataset composition: MDE-derived 25.0M, real 22.4M, synthetic 13.0M">
+        <div class="mix-seg mix-mde" style="flex: 25.0" data-tip="MDE-derived: 25.0M images"><span class="mix-name">MDE&nbsp;</span>25.0M</div>
+        <div class="mix-seg mix-real" style="flex: 22.4" data-tip="Real sensors: 22.4M images"><span class="mix-name">Real&nbsp;</span>22.4M</div>
+        <div class="mix-seg mix-syn" style="flex: 13.0" data-tip="Synthetic: 13.0M images"><span class="mix-name">Synthetic&nbsp;</span>13.0M</div>
+      </div>
+      <div class="mix-legend">
+        <div><span class="sw mix-mde"></span><strong>MDE-derived</strong> &mdash; object-centric priors from RGB datasets: ImageNet-21k, SA-1B</div>
+        <div><span class="sw mix-real"></span><strong>Real</strong> &mdash; real sensor noise: HM3D, Taskonomy, ARKitScenes, DROID, SUN3D, ScanNet, GrandTour, DIML, DrivingStereo, GraspNet-1B</div>
+        <div><span class="sw mix-syn"></span><strong>Synthetic</strong> &mdash; clean metric depth: TartanAir, TartanGround, SHIFT, Replica, Meta GraspNet, Hypersim</div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
-
-<!-- Key Contributions -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Highlights</h2>
-    <div class="columns is-multiline">
-      
-      <div class="column is-half contribution-column">
-        <div class="box contribution-box">
-          <h3 class="title is-5"><i class="fas fa-robot"></i> First Depth Foundation Model for Robotics</h3>
-          <p>Trained on 60M curated depth images using self-supervision, DeFM learns representations that generalize to diverse environments, tasks, and sensors.</p>
-        </div>
-      </div>
-
-      <div class="column is-half contribution-column">
-        <div class="box contribution-box">
-          <h3 class="title is-5"><i class="fas fa-chart-line"></i> State-of-the-Art Performance</h3>
-          <p>SOTA performance across several tasks, including classification, segmentation, navigation, manipulation, and locomotion, without any task-specific fine-tuning.</p>
-        </div>
-      </div>
-
-      <div class="column is-half contribution-column">
-        <div class="box contribution-box">
-          <h3 class="title is-5"><i class="fas fa-ruler"></i> Novel Metric-Aware Normalization</h3>
-          <p>A novel 3-channel log-compressed input representation preserving metric depth across scales from millimeters to 100 meters.</p>
-        </div>
-      </div>
-
-      <div class="column is-half contribution-column">
-        <div class="box contribution-box">
-          <h3 class="title is-5"><i class="fas fa-compress-arrows-alt"></i> Efficient Distilled Models</h3>
-          <p>Includes 11 model variants ranging from 3M to 307M parameters, covering ViT-S/L and distilled CNNs like ResNet, EfficientNet, and RegNet.</p>
-        </div>
-      </div>
-
+<!-- Semantics -->
+<section class="section" id="semantics">
+  <div class="wrap">
+    <h2 class="section-title">Emergent semantic understanding</h2>
+    <p class="lead">Despite lacking color and texture, DeFM features cluster by object part. We map the first three PCA components of the patch features to RGB.</p>
+    <div class="gallery">
+      <figure><img src="static/images/cups_a.png" alt="PCA of cup features across depth sensors" loading="lazy" data-zoom>
+        <figcaption>Cup handles (yellow) stay consistent across ZED 2i and ZED X depth.</figcaption></figure>
+      <figure><img src="static/images/cups_b.png" alt="PCA of cup features across depth sensors" loading="lazy" data-zoom>
+        <figcaption>The same part-level structure with RealSense L515 and D435i.</figcaption></figure>
+      <figure><img src="static/images/drawers_pca.png" alt="PCA of drawer and cabinet handles" loading="lazy" data-zoom>
+        <figcaption>Drawer and cabinet handles are highlighted across furniture types.</figcaption></figure>
+      <figure><img src="static/images/droid_pca.png" alt="PCA of DROID kitchen scenes" loading="lazy" data-zoom>
+        <figcaption>DROID kitchens: countertop, background, robot arm and objects separate cleanly.</figcaption></figure>
+      <figure class="span-2"><img src="static/images/ladder_pca.png" alt="PCA of ladder during real deployment" loading="lazy" data-zoom>
+        <figcaption>Real ladder-climbing deployment: the ladder gets consistent features despite heavy stereo noise.</figcaption></figure>
     </div>
   </div>
 </section>
-<!-- End Key Contributions -->
 
+<!-- Interactive PCA explorer -->
+<section class="section explore" id="explore">
+  <div class="wrap">
+    <h2 class="section-title">Explore DeFM features</h2>
+    <p class="lead">DeFM-L/14 patch features on real sensor depth (robot cameras, ScanNet, GraspNet-1B, Middlebury) and on
+      depth estimated from photos with Depth Anything V2. Hover over an image to see which patches DeFM considers similar
+      to the one under the cursor.</p>
 
-<!-- Summary -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Summary</h2>
-    <div class="content has-text-centered">
-      <!-- TODO: Add Figure 2 - Self-supervised pretraining overview -->
-      <img src="static/images/overview.png" alt="DeFM overview" style="max-width: 100%; height: auto;"/>
-      <p class="has-text-justified" style="margin-top: 1rem;">
-       <strong>DeFM Overview:</strong>  We present DeFM, a foundation model for depth images. Pretrained using DINOv2 style self-distillation method (III) on a curated depth dataset of 60 M images (II), DeFM features achieve state-of-the-art results across several classification and semantic segmentation benchmarks (linear probing) (I). Features obtained from DeFM reveal semantic awareness upon performing PCA despite depth lacking texture and color (V). We distill our largest DeFM model into several efficient CNN networks (IV) to be used for various downstream robotic Reinforcement Learning tasks, including navigation, manipulation, and locomotion (VI).
-      </p>
-      </div>
+    <div class="xp-filters" id="xpFilters">
+      <button class="chip is-active" data-filter="all">All</button>
+      <button class="chip" data-filter="sensor">Sensor depth</button>
+      <button class="chip" data-filter="dav2">Depth from RGB (DAv2)</button>
     </div>
-  </section>
-  <!-- End Method Overview -->
+    <div class="xp-thumbs" id="xpThumbs" role="listbox" aria-label="Samples"></div>
 
-<!-- Method Overview -->
-<!-- <section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Method Overview</h2>
-    <div class="content has-text-centered">
-      <img src="static/images/self_distillation.png" alt="DeFM self-supervised pretraining pipeline" style="max-width: 100%; height: auto;"/>
-      <p class="has-text-justified" style="margin-top: 1rem;">
-        <strong>Self-Distillation Framework:</strong> DeFM uses a DINOv2-style self-distillation objective with global and local crops. The student network processes masked global crops and local crops, learning to match the teacher's representation through DINO losses and iBOT patch-level supervision.
-      </p>
-    </div>
-    
-        <div class="content has-text-centered">
-      <img src="static/images/cnn_distillation.png" alt="DeFM self-supervised pretraining pipeline" style="max-width: 100%; height: auto;"/>
-      <p class="has-text-justified" style="margin-top: 1rem;">
-        <strong>CNN-Distillation Framework:</strong>A BiFPN module is added on top of the CNN encoder to produce dense spatial features, which are supervised using the teacher’s spatial tokens. The teacher’s class token provides global supervision to the CNN’s pooled feature representation.
-      </p>
-    </div>
-
-    <div class="content has-text-centered" style="margin-top: 3rem;">
-      <img src="static/images/input_norm_turbo.png" alt="Three-channel metric-aware depth normalization" style="max-width: 100%; height: auto;"/>
-      <p class="has-text-justified" style="margin-top: 1rem;">
-        <strong>Metric-Aware Input Normalization:</strong> Log normalization effectively captures the overall depth range while preserving fine-grained structure in near-field regions (b, d, f). In contrast, standard metric normalization yields weaker contrast and poorly separated gradients (c, e). In our representation, we stack columns (b), (d), and (f) to form a 3-channel normalized depth input, which preserves metric depth while maintaining robustness across diverse domains.
-      </p>
-    </div>
-  </div>
-</section> -->
-<!-- End Method Overview -->
-
-<!-- Method Overview Carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-        <h2 class="title is-3">Method Overview</h2>
-        <p class="subtitle"></p>
-    <div id="method-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- TODO: Add Figure 5 - PCA on cups from different sensors -->
-          <img src="static/images/self_distillation.png" alt="" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            <strong>Self-Distillation Framework:</strong> DeFM uses a DINOv2-style self-distillation objective with global and local crops. The student network processes masked global crops and local crops, learning to match the teacher's representation through DINO losses and iBOT patch-level supervision.
-          </h2>
+    <div class="xp-viewer">
+      <figure class="xp-panel">
+        <div class="xp-stage" id="xpInputStage">
+          <img id="xpInput" alt="">
+          <span class="xp-marker" id="xpMarkerIn"></span>
         </div>
-        <div class="item">
-          <!-- TODO: Add Figure 1 Panel V - Drawer handles -->
-          <img src="static/images/cnn_distillation.png" alt="PCA visualization of drawer and cabinet handles" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-             <strong>CNN-Distillation Framework:</strong>A BiFPN module is added on top of the CNN encoder to produce dense spatial features, which are supervised using the teacher’s spatial tokens. The teacher’s class token provides global supervision to the CNN’s pooled feature representation.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Add Figure 13 - DROID kitchen scenes -->
-          <img src="static/images/input_norm_turbo.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            <strong>Metric-Aware Input Normalization:</strong> Log normalization effectively captures the overall depth range while preserving fine-grained structure in near-field regions (b, d, f). In contrast, standard metric normalization yields weaker contrast and poorly separated gradients (c, e). In our representation, we stack columns (b), (d), and (f) to form a 3-channel normalized depth input, which preserves metric depth while maintaining robustness across diverse domains.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-<!-- End Method Overview Carousel -->
-
-
-<!-- Semantic Awareness Carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-      <h2 class="title is-3">Emergent Semantic Understanding</h2>
-      <p class="subtitle">Despite lacking color and texture, DeFM learns rich semantic representations. PCA visualization reveals consistent feature clustering across objects, sensors, and domains.</p>
-      <div id="semantic-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- TODO: Add Figure 5 - PCA on cups from different sensors -->
-          <img src="static/images/cups_a.png" alt="PCA visualization of cup features across sensors" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Consistent semantic clustering of cup handles (yellow) across Realsense L515, D435i, ZED 2i, and ZED X sensors.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Add Figure 5 - PCA on cups from different sensors -->
-          <img src="static/images/cups_b.png" alt="PCA visualization of cup features across sensors" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Consistent semantic clustering of cup handles (yellow) across Realsense L515, D435i, ZED 2i, and ZED X sensors.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Add Figure 1 Panel V - Drawer handles -->
-          <img src="static/images/drawers_pca.png" alt="PCA visualization of drawer and cabinet handles" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            DeFM automatically identifies and highlights drawer and cabinet handles across various furniture types.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Add Figure 13 - DROID kitchen scenes -->
-          <img src="static/images/droid_pca.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Complex kitchen scenes show clear clustering: countertops, background surfaces, robot arms, and manipulable objects each have distinct features.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Add Figure 15 - Ladder climbing PCA -->
-          <img src="static/images/ladder_pca.png" alt="PCA visualization of ladder structure from real deployment" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Real-world ladder climbing: DeFM consistently assigns similar features to ladder structures despite heavy sensor noise.
-          </h2>
-        </div>
-      </div>
-        </div>
-    </div>
-</section>
-<!-- End Semantic Awareness -->
-
-<!-- Navigation Results -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-      <h2 class="title is-3">Navigation: Embodiment-Aware Long-Range Navigation</h2>
-      <div id="navigation-carousel" class="carousel results-carousel">
-        <div class="item">
-          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
-            <source src="static/videos/DeFM_navigation_sim.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">
-                DeFM learns powerful features for navigation and is better at avoiding odd obstacles such as lamp-posts, traffic signs and fences compared to DINOv3 and VAE baselines.
-              </h2>
-        </div>
-        <div class="item">
-          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
-            <source src="static/videos/DeFM_nav_realworld.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">
-                Real-world deployments in diverse environments, including a confined obstacle-rich indoor setting, an outdoor urban environment, a park environment, and a high-clutter construction site.  Our policy generalizes effectively while handling diverse obstacles such as pedestrians, scooters, barriers, furniture, etc., as well as navigating uneven terrains.
-              </h2>
-        </div>
-        <div class="item">
-          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
-            <source src="static/videos/DeFM_nav_realworld_long.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">
-                Robot deployment in Park environment navigating a waypoint at 100 meters. The navigation policy utilizing DeFM features achieves robust sim-to-real transfer.
-              </h2>
-        </div>
-        <!-- <div class="item">
-          <img src="static/images/nav_failures.png" alt="Navigation failure analysis" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            DeFM reduces collision failures compared to baselines, especially in out-of-distribution environments.
-          </h2>
-        </div> -->
-      </div>
-      
-  <!-- Navigation Stats -->
-  <div class="box" style="margin-top: 2rem; background-color: #f0f7ff;">
-        <h3 class="title is-4 has-text-centered">Navigation Performance</h3>
-        <!-- <div class="columns is-multiline has-text-centered">
-          <div class="column is-one-third">
-            <p class="heading">Habitat PointGoal (Gibson Val)</p>
-            <p class="title is-4">88.4% SPL</p>
-          </div>
-          <div class="column is-one-third">
-            <p class="heading">Embodiment-Aware (Training Env)</p>
-            <p class="title is-4">90.3% SR</p>
-          </div>
-          <div class="column is-one-third">
-            <p class="heading">OOD Environments (Avg)</p>
-            <p class="title is-4">84.3% SR</p>
-          </div>
-        </div> -->
-        <p class="has-text-centered" style="margin-top: 1rem;">
-          <strong>Key Insight:</strong> DeFM works out-of-the-box without task-specific depth preprocessing, achieving robust sim-to-real transfer and reducing collision failures in novel environments.
-        </p>
-      </div>
-      </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- End Navigation -->
-
-<!-- Manipulation Results -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-      <h2 class="title is-3">Manipulation: Dexterous Grasping</h2>
-      <div id="manipulation-carousel" class="carousel results-carousel">
-        <div class="item">
-          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
-            <source src="static/videos/DeFM_manipulation_text.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">
-                Our Frozen DeFM encoder outperforms a finetuned Imagenet encoder and a CNN encoder trained from scratch. We achieve competitive performance with a finetuned Dinov3 encoder. On finetuning our DeFM encoder, we outperform all baselines by 9 percent.
-              </h2>
-        </div>
-        <div class="item">
-          <img src="static/images/dextrah_depth_noise.png" alt="Depth images under different noise models" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            During training, images are augmented with speckles, dropout, and stick noise (similar to <a href="https://arxiv.org/abs/2407.02274" target="_blank">DextrAH</a>). For evaluations, we also consider depth images augmented with the Kinect noise model.
-          </h2>
-        </div>
-        <div class="item">  
-          <!-- TODO: Add Figure 13 - DROID kitchen scenes -->
-          <img src="static/images/droid_pca.png" alt="PCA visualization of kitchen manipulation scenes" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Complex kitchen scenes show clear clustering: countertops, background surfaces, robot arms, and manipulable objects each have distinct features.
-          </h2>
-        </div>
-      </div>
-      
-  <!-- Manipulation Stats -->
-  <div class="box" style="margin-top: 2rem; background-color: #fff7ed;">
-        <h3 class="title is-4 has-text-centered">Dexterous Grasping Performance</h3>
-        <!-- <div class="columns is-multiline has-text-centered">
-          <div class="column is-one-third">
-            <p class="heading">Success Rate (Fine-tuned)</p>
-            <p class="title is-4">89.4%</p>
-          </div>
-          <div class="column is-one-third">
-            <p class="heading">Frozen Encoder Performance</p>
-            <p class="title is-4">80.9%</p>
-          </div>
-          <div class="column is-one-third">
-            <p class="heading">Noise Robustness</p>
-            <p class="title is-4">12% drop</p>
-            <p class="subtitle is-6">(vs 28% for baselines)</p>
-          </div>
-        </div> -->
-        <p class="has-text-centered" style="margin-top: 1rem;">
-          <strong>Key Insight:</strong> DeFM features remain stable across sensor noise variations, with frozen encoder outperforming all frozen baselines by 23% (including DINOv3) and fine-tuned DeFM outperforming all baselines by 9%. 
-        </p>
-      </div>
-      </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- End Manipulation -->
-
-<!-- Locomotion Results -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-      <h2 class="title is-3">Locomotion: Quadruped Ladder Climbing</h2>
-      <div id="locomotion-carousel" class="carousel results-carousel">
-        <div class="item">
-          <video poster="" autoplay controls muted loop height="100%" preload="metadata" playsinline>
-            <source src="static/videos/DeFM_ladder_final.mp4" type="video/mp4">
-              </video>
-              <h2 class="subtitle has-text-centered">
-               We match the performance to training a CNN baseline from scratch highlighting the generalizability of our features.
-              </h2>
-        </div>
-        <div class="item">
-          <!-- TODO: Add Figure 15 - Ladder climbing PCA -->
-          <img src="static/images/ladder_pca.png" alt="PCA visualization of ladder structure from real deployment" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">
-            Real-world ladder climbing: DeFM consistently assigns similar features to ladder structures despite heavy sensor noise.
-          </h2>
-        </div>
-      </div>
-      
-  <!-- Locomotion Stats -->
-    <div class="box" style="margin-top: 2rem; background-color: #f0fdf4;">
-        <h3 class="title is-4 has-text-centered">Ladder Climbing Performance</h3>
-        <p class="has-text-centered" style="margin-top: 1rem;">
-          <strong>Key Insight:</strong> Frozen DeFM matches scratch-trained baseline (90.45%) without task-specific finetuning, while demonstrating noise robustness on real-world PCA analysis.
-        </p>
-      </div>
-      </div>
-        </div>
-      </div>
-    </div>
-</section>
-<!-- End Locomotion -->
-
-<!-- Segmentation Results -->
-<section class="section hero">
-  <div class="hero-body">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">Dense Prediction: Semantic Segmentation</h2>
-        <div class="content has-text-centered">
-          <!-- TODO: Add Figure 6 - Qualitative segmentation comparisons -->
-          <figure class="image">
-            <img src="static/images/segmentation_vits.png" alt="Segmentation results across 5 datasets" style="max-width: 100%; height: auto;"/>
-          </figure>
-          <p class="has-text-justified" style="margin-top: 1rem;">
-            <strong>Qualitative Results:</strong> DeFM-S/14 significantly outperforms DINOv3-S/16 on diverse segmentation tasks spanning indoor (ScanNet, SUN-RGBD), outdoor (OFFSED, TartanGround), and manipulation (GraspNet-1B) domains.
-          </p>
-        </div>
-
-        <!-- TODO: Create infographic from Table V -->
-        <div class="box" style="margin-top: 2rem; background-color: #faf5ff;">
-          <h3 class="title is-4 has-text-centered">Segmentation Performance (mIoU)</h3>
-          <div class="content">
-            <div style="overflow-x: auto;">
-            <table class="table is-striped is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>ScanNet</th>
-                  <th>SUN-RGBD</th>
-                  <th>OFFSED</th>
-                  <th>TartanGround</th>
-                  <th>GraspNet-1B</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>DeFM ViT-L/14</strong></td>
-                  <td><strong>31.34</strong></td>
-                  <td>31.26</td>
-                  <td><strong>57.62</strong></td>
-                  <td><strong>67.69</strong></td>
-                  <td><strong>27.85</strong></td>
-                </tr>
-                <tr>
-                  <td>DINOv3 ViT-L/16</td>
-                  <td>28.52</td>
-                  <td><strong>32.74</strong></td>
-                  <td>54.42</td>
-                  <td>62.16</td>
-                  <td>23.89</td>
-                </tr>
-                <tr>
-                  <td><strong>DeFM ViT-S/14</strong></td>
-                  <td><strong>27.69</strong></td>
-                  <td><strong>27.78</strong></td>
-                  <td><strong>57.35</strong></td>
-                  <td><strong>64.66</strong></td>
-                  <td><strong>19.89</strong></td>
-                </tr>
-                <tr>
-                  <td>DINOv3 ViT-S/16</td>
-                  <td>20.05</td>
-                  <td>18.42</td>
-                  <td>56.32</td>
-                  <td>56.97</td>
-                  <td>14.87</td>
-                </tr>
-              </tbody>
-            </table>
-            </div>
-            <p class="has-text-centered" style="margin-top: 1rem;">
-              <strong>Key Result:</strong> DeFM achieves state-of-the-art on 4/5 datasets. DeFM-S/14 shows up to 30% mIoU improvement over similar-sized baselines, demonstrating the critical need for depth-specific efficient foundation models.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-<!-- End Segmentation -->
-
-<!-- Model Zoo -->
-<section class="section hero is-light">
-  <div class="hero-body">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Model Zoo: Efficient Variants for Robotics</h2>
-    <p class="subtitle has-text-centered">11 model variants ranging from 3M to 307M parameters, optimized for diverse deployment scenarios.</p>
-    
-    <div class="content">
-      <!-- TODO: Create visual infographic from Table VI -->
-      <div class="box">
-        <h3 class="title is-5">Vision Transformers</h3>
-        <div style="overflow-x: auto;">
-        <table class="table is-striped is-fullwidth">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Params</th>
-              <th>FLOPs</th>
-              <th>RTX 4090 (ms) - BS 128</th>
-              <th>Jetson Orin (ms)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>ViT-L/14</strong></td>
-              <td>307M</td>
-              <td>9962 G</td>
-              <td>625</td>
-              <td>72.8</td>
-            </tr>
-            <tr>
-              <td><strong>ViT-S/14</strong></td>
-              <td>22M</td>
-              <td>707 G</td>
-              <td>64</td>
-              <td>11.9</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-
-      <div class="box">
-        <h3 class="title is-5">ResNet Family</h3>
-        <div style="overflow-x: auto;">
-        <table class="table is-striped is-fullwidth">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Params</th>
-              <th>FLOPs</th>
-              <th>RTX 4090 (ms) - BS 128</th>
-              <th>Jetson Orin (ms)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>ResNet-50</strong></td>
-              <td>26M</td>
-              <td>631 G</td>
-              <td>69</td>
-              <td>17.8</td>
-            </tr>
-            <tr>
-              <td><strong>ResNet-34</strong></td>
-              <td>22M</td>
-              <td>494 G</td>
-              <td>33</td>
-              <td>13.5</td>
-            </tr>
-            <tr>
-              <td><strong>ResNet-18</strong></td>
-              <td>12M</td>
-              <td>256 G</td>
-              <td>21</td>
-              <td>8.7</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="box">
-            <h3 class="title is-5">RegNet Family</h3>
-            <table class="table is-striped is-fullwidth is-narrow">
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>Params</th>
-                  <th>Orin (ms)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>RegNetY-1.6GF</td>
-                  <td>12M</td>
-                  <td>41.8</td>
-                </tr>
-                <tr>
-                  <td>RegNetY-800MF</td>
-                  <td>6M</td>
-                  <td>24.2</td>
-                </tr>
-                <tr>
-                  <td>RegNetY-400MF</td>
-                  <td>4M</td>
-                  <td>25.2</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="column">
-          <div class="box">
-            <h3 class="title is-5">EfficientNet Family</h3>
-            <table class="table is-striped is-fullwidth is-narrow">
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>Params</th>
-                  <th>Orin (ms)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>EfficientNet-B6</td>
-                  <td>29M</td>
-                  <td>54.1</td>
-                </tr>
-                <tr>
-                  <td>EfficientNet-B4</td>
-                  <td>14M</td>
-                  <td>39.7</td>
-                </tr>
-                <tr>
-                  <td>EfficientNet-B2</td>
-                  <td>5M</td>
-                  <td>28.4</td>
-                </tr>
-                <tr>
-                  <td>EfficientNet-B0</td>
-                  <td>3M</td>
-                  <td>21.0</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="notification is-info is-light">
-        <p><strong>Note:</strong> All timings measured with PyTorch (BS=128 for RTX 4090, BS=1 for Jetson Orin, 224×224 input). TensorRT/ONNX optimization can further reduce latency, especially on edge devices.</p>
-      </div>
-
-      <!-- TODO: Add download links when models are released -->
-      <div class="has-text-centered" style="margin-top: 2rem;">
-        <a href="https://github.com/leggedrobotics/defm" class="button is-primary is-large" target="_blank">
-          <span class="icon">
-            <i class="fas fa-download"></i>
+        <figcaption>
+          <span id="xpInputLabel">Input</span>
+          <span class="xp-toggle" id="xpInputToggle">
+            <button class="is-active" data-view="rgb">RGB</button><button data-view="depth">Depth</button>
           </span>
-          <span>Download Pretrained Models</span>
-        </a>
+        </figcaption>
+      </figure>
+      <figure class="xp-panel">
+        <div class="xp-stage" id="xpFeatStage">
+          <img id="xpPca" alt="PCA of DeFM patch features">
+          <canvas id="xpSim" class="xp-hidden"></canvas>
+          <span class="xp-marker" id="xpMarkerFeat"></span>
+        </div>
+        <figcaption>
+          <span id="xpFeatLabel">PCA of patch features</span>
+          <span class="xp-legend xp-hidden" id="xpLegend"><span>less similar</span><i></i><span>more similar</span></span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="xp-info">
+      <div>
+        <h3 id="xpTitle"></h3>
+        <p id="xpMeta"></p>
+      </div>
+      <div class="xp-controls">
+        <a class="btn" id="xpTryOwn" href="#" target="_blank" rel="noopener"><i class="fas fa-upload"></i> Try your own image</a>
       </div>
     </div>
-  </div>
+    <div class="xp-demo" id="xpDemo" hidden>
+      <div class="xp-demo-head">
+        <span>Upload a depth image or a photo. Runs on a Hugging Face Space (shared GPU, CPU fallback); the first load can
+          take a minute if the Space is asleep.</span>
+        <a id="xpDemoOpen" href="#" target="_blank" rel="noopener">Open in a new tab <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <iframe id="xpDemoFrame" title="DeFM feature PCA demo" allow="clipboard-write"></iframe>
+    </div>
+    <p class="xp-note">Features are averaged over half-patch shifts and a horizontal flip (7-px grid) and upsampled smoothly; similarity uses a rank-64 projection of the 1024-d patch features (cosine). The background
+      of some samples is removed by thresholding the first principal component. Image credits: Middlebury 2014
+      (Scharstein et al.), ScanNet (Dai et al.), GraspNet-1Billion (Fang et al.), ImageNet (Deng et al.).</p>
   </div>
 </section>
-<!-- End Model Zoo -->
 
-<!-- Dataset Overview -->
-<!-- <section class="section hero">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Curated Depth Dataset: 60M Images</h2>
-    <div class="content">
-      <p class="has-text-centered">
-        DeFM is pretrained on a carefully curated dataset of 60.4M depth images from 18 diverse sources, ensuring coverage across scales, domains, and sensor modalities.
-      </p>
-      
-      <div class="box">
-        <h3 class="title is-5 has-text-centered">Dataset Composition</h3>
-        <div class="columns">
-          <div class="column">
-            <h4 class="title is-6">Monocular Depth Estimation (25M)</h4>
-            <ul>
-              <li>ImageNet-21k: 14M images</li>
-              <li>SA-1B: 11M images</li>
-            </ul>
-            <p class="is-size-7"><em>Provides object-centric priors and semantic diversity</em></p>
-          </div>
-          <div class="column">
-            <h4 class="title is-6">Synthetic (13M)</h4>
-            <ul>
-              <li>TartanAir: 5.8M, TartanGround: 5.6M</li>
-              <li>SHIFT: 0.9M, Replica: 0.3M</li>
-              <li>Meta GraspNet: 0.3M, Hypersim: 0.07M</li>
-            </ul>
-            <p class="is-size-7"><em>Clean metric depth across diverse environments</em></p>
-          </div>
-          <div class="column">
-            <h4 class="title is-6">Real (22M)</h4>
-            <ul>
-              <li>HM3D: 11M, Taskonomy: 4M</li>
-              <li>ARKitScenes: 3M, DROID: 2.8M</li>
-              <li>ScanNet: 0.4M, GraspNet-1B: 0.1M</li>
-              <li>+ 6 more datasets</li>
-            </ul>
-            <p class="is-size-7"><em>Real sensor noise characteristics for robust sim-to-real</em></p>
-          </div>
-        </div>
+<!-- Benchmarks -->
+<section class="section alt" id="results">
+  <div class="wrap">
+    <h2 class="section-title">Benchmarks</h2>
+    <p class="lead">Frozen encoders with linear probes. RGB foundation models receive min-max normalized depth stacked into three channels. Hover a bar for details.</p>
+
+    <div class="tabs" role="tablist" data-tabs="bench">
+      <button role="tab" class="tab is-active" data-tab="seg">Semantic segmentation</button>
+      <button role="tab" class="tab" data-tab="cls">Classification</button>
+    </div>
+
+    <div class="tab-panel is-active" data-panel="bench:seg">
+      <div class="subtabs" data-chart-switch="seg">
+        <button class="chip is-active" data-group="L">ViT-L</button>
+        <button class="chip" data-group="S">ViT-S</button>
+        <button class="chip" data-group="C">CNNs &amp; point-cloud FMs</button>
       </div>
+      <div class="chart" id="chart-seg"></div>
+      <p class="takeaway" id="takeaway-seg"></p>
+      <figure class="figure">
+        <img src="static/images/segmentation_vits.png" alt="Qualitative segmentation results of DINOv3-S/16 and DeFM-S/14" loading="lazy" data-zoom>
+        <figcaption><strong>Qualitative results.</strong> DINOv3-S/16 vs. DeFM-S/14 across indoor (ScanNet, SUN-RGBD), outdoor (OFFSED, TartanGround) and manipulation (GraspNet-1B) scenes.</figcaption>
+      </figure>
     </div>
-  </div>
-</section> -->
-<!-- End Dataset -->
 
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+    <div class="tab-panel" data-panel="bench:cls">
+      <div class="subtabs" data-chart-switch="cls">
+        <button class="chip is-active" data-group="L">ViT-L</button>
+        <button class="chip" data-group="S">ViT-S</button>
       </div>
+      <div class="chart" id="chart-cls"></div>
+      <p class="takeaway" id="takeaway-cls"></p>
     </div>
   </div>
-</section> -->
-<!-- End youtube video -->
+</section>
 
-<!-- Paper poster -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-      <iframe src="static/pdfs/defm_poster.pdf" width="100%" height="550"></iframe>
+<!-- Robotics -->
+<section class="section" id="robotics">
+  <div class="wrap">
+    <h2 class="section-title">Robotic tasks</h2>
+    <p class="lead">Three RL tasks with the encoder frozen unless stated otherwise. Baselines: ImageNet-pretrained, a VAE pretrained on the DeFM dataset, and DINOv3-L distilled into the same architecture.</p>
+
+    <div class="tabs" role="tablist" data-tabs="robot">
+      <button role="tab" class="tab is-active" data-tab="nav"><i class="fas fa-route"></i> Navigation</button>
+      <button role="tab" class="tab" data-tab="manip"><i class="fas fa-hand-paper"></i> Manipulation</button>
+      <button role="tab" class="tab" data-tab="loco"><i class="fas fa-shoe-prints"></i> Locomotion</button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="tab-panel is-active" data-panel="robot:nav">
+      <h3 class="task-title">Embodiment-aware long-range navigation <span>Unitree B2W &middot; RegNetX-400MF + FPN</span></h3>
+      <div class="player" data-player>
+        <div class="video-frame">
+          <video controls muted loop playsinline preload="metadata" src="static/videos/DeFM_nav_realworld.mp4"></video>
+        </div>
+        <div class="player-list">
+          <button class="player-item is-active" data-src="static/videos/DeFM_nav_realworld.mp4"
+            data-caption="Real-world deployments indoors, in an urban area, a park and a construction site, handling pedestrians, scooters, barriers, furniture and uneven terrain.">Real world</button>
+          <button class="player-item" data-src="static/videos/DeFM_nav_realworld_long.mp4"
+            data-caption="Park deployment towards a waypoint about 100 m away.">Long range (100 m)</button>
+          <button class="player-item" data-src="static/videos/DeFM_navigation_sim.mp4"
+            data-caption="In simulation, DeFM avoids thin and unusual obstacles such as lamp posts, traffic signs and fences better than the DINOv3 and VAE baselines.">Simulation</button>
+        </div>
+        <p class="player-caption">Real-world deployments indoors, in an urban area, a park and a construction site, handling pedestrians, scooters, barriers, furniture and uneven terrain.</p>
+      </div>
+      <h4 class="chart-title">Success rate (%) in the training environment and three unseen TartanGround environments</h4>
+      <div class="chart" id="chart-nav"></div>
+      <p class="takeaway">DeFM has the highest success rate in all four environments and the fewest collisions. It needs no task-specific depth
+        clipping, noise model or other hand-engineering, unlike the VAE.</p>
+    </div>
+
+    <!-- Manipulation -->
+    <div class="tab-panel" data-panel="robot:manip">
+      <h3 class="task-title">Dexterous grasping <span>KUKA + Allegro hand &middot; ResNet-18</span></h3>
+      <div class="video-frame">
+        <video controls muted loop playsinline preload="none" src="static/videos/DeFM_manipulation_text.mp4"></video>
+      </div>
+      <div class="subtabs" data-chart-switch="manip">
+        <button class="chip is-active" data-group="frozen">Frozen encoder</button>
+        <button class="chip" data-group="ft">Fine-tuned encoder</button>
+      </div>
+      <h4 class="chart-title">Success rate normalized to the teacher policy (%), 2,000 episodes</h4>
+      <div class="chart" id="chart-manip"></div>
+      <p class="takeaway" id="takeaway-manip"></p>
+      <figure class="figure">
+        <img src="static/images/dextrah_depth_noise.png" alt="Depth inputs under training noise and Kinect noise" loading="lazy" data-zoom>
+        <figcaption>Training uses speckle, dropout and stick noise; evaluation also uses the Kinect noise model.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Locomotion -->
+    <div class="tab-panel" data-panel="robot:loco">
+      <h3 class="task-title">Quadrupedal ladder climbing <span>ANYmal &middot; four depth cameras</span></h3>
+      <div class="video-frame">
+        <video controls muted loop playsinline preload="none" src="static/videos/DeFM_ladder_final.mp4"></video>
+      </div>
+      <h4 class="chart-title">Climb success rate (%) over rung radii of 15&ndash;45&nbsp;mm and ladder angles of 70&ndash;90&deg;</h4>
+      <div class="chart" id="chart-loco"></div>
+      <p class="takeaway">Frozen DeFM is the best frozen encoder (90.14%) and within 0.3 points of a CNN trained from scratch for this task.</p>
     </div>
   </div>
-</section> -->
-<!--End paper poster -->
+</section>
 
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <div class="bibtex-header">
-      <h2 class="title">BibTeX</h2>
-      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-        <i class="fas fa-copy"></i>
-        <span class="copy-text">Copy</span>
-      </button>
+<!-- Model zoo -->
+<section class="section alt" id="models">
+  <div class="wrap">
+    <h2 class="section-title">Model zoo</h2>
+    <p class="lead">All 12 models are on <a href="https://huggingface.co/leggedrobotics/defm" target="_blank" rel="noopener">Hugging Face</a> and loadable via TorchHub.
+      Timings with PyTorch at 224&times;224, no TensorRT/ONNX.</p>
+
+    <div class="subtabs" id="zooFilter">
+      <button class="chip is-active" data-family="all">All</button>
+      <button class="chip" data-family="vit">ViT</button>
+      <button class="chip" data-family="resnet">ResNet</button>
+      <button class="chip" data-family="regnet">RegNet</button>
+      <button class="chip" data-family="effnet">EfficientNet</button>
     </div>
-    <pre id="bibtex-code"><code>@misc{patel2026defm,
-      title={DeFM: Learning Foundation Representations from Depth for Robotics}, 
-      author={Manthan Patel and Jonas Frey and Mayank Mittal and Fan Yang and Alexander Hansson and Amir Bar and Cesar Cadena and Marco Hutter},
-      year={2026},
-      eprint={2601.18923},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2601.18923}, 
+    <div class="table-wrap">
+      <table class="zoo">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th class="num">Params (M)</th>
+            <th class="num">Linear probe (%)<br><small>ImageNet-1k-Depth</small></th>
+            <th class="num">RTX 4090 (ms)<br><small>batch 128</small></th>
+            <th class="num">Jetson Orin (ms)<br><small>batch 1</small></th>
+            <th>TorchHub name</th>
+          </tr>
+        </thead>
+        <tbody id="zooBody"></tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-title">Quick start</h3>
+    <div class="code-block">
+      <button class="copy-btn" type="button" data-copy="quickstart"><i class="fas fa-copy"></i> <span>Copy</span></button>
+<pre id="quickstart"><code>import torch
+from defm import preprocess_depth_image  # pip install -e . from the repo
+
+model = torch.hub.load('leggedrobotics/defm:main', 'defm_vit_l14', pretrained=True)
+model.eval().to("cuda")
+
+# metric_depth: depth in meters (numpy array, tensor or PIL image)
+x = preprocess_depth_image(metric_depth, target_size=518, patch_size=14)
+with torch.no_grad():
+    out = model.get_intermediate_layers(x, n=1, reshape=True, return_class_token=True)
+spatial_tokens, class_token = out[0]  # (B, C, H', W'), (B, C)</code></pre>
+    </div>
+    <p class="note">See the <a href="https://github.com/leggedrobotics/defm" target="_blank" rel="noopener">repository</a> for installation, CNN inference and PCA notebooks.</p>
+  </div>
+</section>
+
+<!-- Citation -->
+<section class="section" id="citation">
+  <div class="wrap">
+    <h2 class="section-title">Citation</h2>
+    <div class="code-block">
+      <button class="copy-btn" type="button" data-copy="bibtex"><i class="fas fa-copy"></i> <span>Copy</span></button>
+<pre id="bibtex"><code>@article{patel2026defm,
+  title   = {DeFM: Learning Foundation Representations from Depth for Robotics},
+  author  = {Patel, Manthan and Frey, Jonas and Mittal, Mayank and Yang, Fan and
+             Hansson, Alexander and Bar, Amir and Cadena, Cesar and Hutter, Marco},
+  journal = {IEEE Transactions on Robotics},
+  year    = {2026},
+  eprint  = {2601.18923},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
 }</code></pre>
+    </div>
   </div>
 </section>
-<!--End BibTex citation -->
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+<!-- Acknowledgments -->
+<section class="section alt" id="acknowledgments">
+  <div class="wrap">
+    <h2 class="section-title">Acknowledgments</h2>
+    <p class="prose ack">
+      We would like to thank the researchers and developers of the
+      <a href="https://github.com/facebookresearch/dinov2" target="_blank" rel="noopener">DINOv2</a> repository for their
+      excellent open-source work, which served as the foundation for our implementation.
+    </p>
+    <p class="prose ack">
+      This work was supported as part of the Swiss AI Initiative by a grant from the Swiss National Supercomputing Centre
+      (CSCS) under project ID a144 on Alps. This work was also supported by the Luxembourg National Research Fund
+      (Ref. 18990533), and the Swiss National Science Foundation (SNSF) through projects No. 200021E_229503 and No. 227617.
+    </p>
+  </div>
+</section>
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+</main>
 
-        </div>
-      </div>
-    </div>
+<footer class="footer">
+  <div class="wrap">
+    <p>
+      This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>,
+      which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+      You are free to borrow the source of this website; we just ask that you link back to this page in the footer.
+      This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
   </div>
 </footer>
 
+<button class="to-top" type="button" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+<div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img alt=""></div>
 
-</div>
-</div>
-</main>
 </body>
 </html>

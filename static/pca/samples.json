@@ -1,0 +1,569 @@
+[
+ {
+  "id": "anymal_ladder",
+  "title": "ANYmal climbing a ladder",
+  "source": "Photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   46,
+   39
+  ],
+  "k": 64,
+  "scale": 0.0054242163300466635,
+  "energy": 0.946,
+  "size": [
+   640,
+   540
+  ]
+ },
+ {
+  "id": "b2w_street",
+  "title": "Robot next to a scooter and bikes",
+  "source": "Photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   24,
+   46
+  ],
+  "k": 64,
+  "scale": 0.0060570584202457286,
+  "energy": 0.954,
+  "size": [
+   328,
+   640
+  ]
+ },
+ {
+  "id": "fpv_barriers",
+  "title": "Construction barriers on a sidewalk",
+  "source": "Robot camera in Zurich (ZED X depth)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   26,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005470817394320746,
+  "energy": 0.957,
+  "size": [
+   360,
+   640
+  ]
+ },
+ {
+  "id": "lion",
+  "title": "Lion",
+  "source": "ImageNet photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   34,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006538230898063192,
+  "energy": 0.964,
+  "size": [
+   480,
+   640
+  ]
+ },
+ {
+  "id": "lounge",
+  "title": "Lounge with a round table",
+  "source": "ScanNet (Structure Sensor depth)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   35,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006049570177203923,
+  "energy": 0.963,
+  "size": [
+   480,
+   640
+  ]
+ },
+ {
+  "id": "motorcycle",
+  "title": "Motorcycle",
+  "source": "Middlebury 2014 stereo (Scharstein et al., GCPR 2014)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": 0.5,
+  "invert": false,
+  "grid": [
+   31,
+   46
+  ],
+  "k": 64,
+  "scale": 0.0061342354304561595,
+  "energy": 0.966,
+  "size": [
+   429,
+   640
+  ]
+ },
+ {
+  "id": "kuka",
+  "title": "KUKA arm with Allegro hand",
+  "source": "Photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   40,
+   46
+  ],
+  "k": 64,
+  "scale": 0.0061592906863413305,
+  "energy": 0.965,
+  "size": [
+   556,
+   640
+  ]
+ },
+ {
+  "id": "cattle",
+  "title": "Herd of cattle",
+  "source": "ImageNet photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   34,
+   46
+  ],
+  "k": 64,
+  "scale": 0.00662603153146438,
+  "energy": 0.956,
+  "size": [
+   480,
+   640
+  ]
+ },
+ {
+  "id": "tandem",
+  "title": "Tandem bicycle",
+  "source": "ImageNet photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": 0.5,
+  "invert": false,
+  "grid": [
+   30,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005560967688093212,
+  "energy": 0.969,
+  "size": [
+   421,
+   640
+  ]
+ },
+ {
+  "id": "b2w_lab",
+  "title": "Robot in the lab with carts",
+  "source": "Photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   24,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005808729957330975,
+  "energy": 0.951,
+  "size": [
+   340,
+   640
+  ]
+ },
+ {
+  "id": "fpv_bridge",
+  "title": "Footbridge with railings",
+  "source": "Robot camera in Zurich (ZED X depth)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   26,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006358716730665063,
+  "energy": 0.969,
+  "size": [
+   360,
+   640
+  ]
+ },
+ {
+  "id": "tabletop",
+  "title": "Cluttered tabletop",
+  "source": "GraspNet-1B (RealSense D435 depth)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   26,
+   46
+  ],
+  "k": 64,
+  "scale": 0.00643626082812367,
+  "energy": 0.983,
+  "size": [
+   360,
+   640
+  ]
+ },
+ {
+  "id": "piano",
+  "title": "Piano and guitar",
+  "source": "Middlebury 2014 stereo (Scharstein et al., GCPR 2014)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   31,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005650363598758253,
+  "energy": 0.961,
+  "size": [
+   435,
+   640
+  ]
+ },
+ {
+  "id": "airliner",
+  "title": "Airliner",
+  "source": "ImageNet photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": 0.5,
+  "invert": false,
+  "grid": [
+   31,
+   46
+  ],
+  "k": 64,
+  "scale": 0.007135933191442668,
+  "energy": 0.987,
+  "size": [
+   426,
+   640
+  ]
+ },
+ {
+  "id": "ladder_rungs",
+  "title": "Ladder rungs (ANYmal camera)",
+  "source": "RealSense D435 on ANYmal",
+  "depth": "sensor",
+  "rgb": false,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   26,
+   46
+  ],
+  "k": 64,
+  "scale": 0.0062153340880537105,
+  "energy": 0.971,
+  "size": [
+   362,
+   640
+  ]
+ },
+ {
+  "id": "bookshelf",
+  "title": "Bookshelf and chairs",
+  "source": "ScanNet (Structure Sensor depth)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   35,
+   46
+  ],
+  "k": 64,
+  "scale": 0.00608350481934184,
+  "energy": 0.967,
+  "size": [
+   480,
+   640
+  ]
+ },
+ {
+  "id": "fpv_chairs",
+  "title": "Caf\u00e9 chairs on a cobblestone street",
+  "source": "Robot camera in Zurich (ZED X depth)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   26,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006856714025055887,
+  "energy": 0.961,
+  "size": [
+   360,
+   640
+  ]
+ },
+ {
+  "id": "recycle",
+  "title": "Recycling bin",
+  "source": "Middlebury 2014 stereo (Scharstein et al., GCPR 2014)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   31,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006013910105510105,
+  "energy": 0.967,
+  "size": [
+   432,
+   640
+  ]
+ },
+ {
+  "id": "cyclists",
+  "title": "Mountain bikers",
+  "source": "ImageNet photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   34,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006096489407944684,
+  "energy": 0.973,
+  "size": [
+   480,
+   640
+  ]
+ },
+ {
+  "id": "b2w_courtyard",
+  "title": "Robot in a courtyard",
+  "source": "Photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   35,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005454665763213442,
+  "energy": 0.949,
+  "size": [
+   480,
+   640
+  ]
+ },
+ {
+  "id": "jadeplant",
+  "title": "Jade plant",
+  "source": "Middlebury 2014 stereo (Scharstein et al., GCPR 2014)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": 0.5,
+  "invert": false,
+  "grid": [
+   35,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006230894438219672,
+  "energy": 0.966,
+  "size": [
+   483,
+   640
+  ]
+ },
+ {
+  "id": "rocking_chair",
+  "title": "Teddy bear on a rocking chair",
+  "source": "ImageNet photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": 0.5,
+  "invert": false,
+  "grid": [
+   46,
+   44
+  ],
+  "k": 64,
+  "scale": 0.00599734537944753,
+  "energy": 0.957,
+  "size": [
+   640,
+   617
+  ]
+ },
+ {
+  "id": "fpv_bikes",
+  "title": "Parked bicycles",
+  "source": "Robot camera in Zurich (ZED X depth)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   26,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006595430945090696,
+  "energy": 0.965,
+  "size": [
+   360,
+   640
+  ]
+ },
+ {
+  "id": "playtable",
+  "title": "Table and chairs",
+  "source": "Middlebury 2014 stereo (Scharstein et al., GCPR 2014)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   31,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005974679488575507,
+  "energy": 0.956,
+  "size": [
+   436,
+   640
+  ]
+ },
+ {
+  "id": "b2w_pillar",
+  "title": "Robot next to a pillar",
+  "source": "Photo \u2192 Depth Anything V2",
+  "depth": "dav2",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   26,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005820051330763042,
+  "energy": 0.953,
+  "size": [
+   360,
+   640
+  ]
+ },
+ {
+  "id": "art",
+  "title": "Art studio",
+  "source": "Middlebury 2014 stereo (Scharstein et al., GCPR 2014)",
+  "depth": "sensor",
+  "rgb": true,
+  "group": null,
+  "bg": null,
+  "invert": false,
+  "grid": [
+   37,
+   46
+  ],
+  "k": 64,
+  "scale": 0.005770502696738405,
+  "energy": 0.965,
+  "size": [
+   511,
+   640
+  ]
+ },
+ {
+  "id": "cups",
+  "title": "Cups",
+  "source": "Real depth sensor (DeFM examples)",
+  "depth": "sensor",
+  "rgb": false,
+  "group": null,
+  "bg": 0.5,
+  "invert": true,
+  "grid": [
+   46,
+   46
+  ],
+  "k": 64,
+  "scale": 0.006300365234065944,
+  "energy": 0.972,
+  "size": [
+   640,
+   640
+  ]
+ }
+]
