@@ -1,5 +1,6 @@
-// All numbers below are taken from the final T-RO version of the paper
-// (classification, segmentation, navigation, grasping, ladder climbing and inference-time tables).
+// Numbers from the final T-RO version of the paper (segmentation, navigation, grasping, ladder climbing and
+// inference-time tables). Classification and the zoo's linear-probe column come from the benchmark re-run with the
+// public weights (github.com/leggedrobotics/defm, benchmarks/README.md); its segmentation numbers match the paper.
 
 // ---------------------------------------------------------------- data
 const SEG_DATASETS = ['ScanNet', 'SUN-RGBD', 'OFFSED', 'TartanGround', 'GraspNet-1B'];
@@ -40,21 +41,21 @@ const CLS_METRICS = ['Top-1 KNN', 'Top-5 KNN', 'Linear probe'];
 const CLS = {
   L: {
     rows: [
-      ['DeFM ViT-L/14', [63.46, 84.79, 71.72], true],
-      ['DINOv3 ViT-L/16', [64.07, 83.48, 69.55]],
-      ['DINOv2 ViT-L/14', [60.28, 80.75, 68.26]],
-      ['C-RADIOv3 ViT-L/16', [55.23, 76.96, 63.92]],
+      ['DeFM ViT-L/14', [64.76, 85.42, 72.76], true],
+      ['DINOv3 ViT-L/16', [64.79, 84.00, 69.66]],
+      ['DINOv2 ViT-L/14', [61.32, 81.51, 68.90]],
+      ['C-RADIOv3 ViT-L/16', [55.87, 77.57, 63.99]],
     ],
-    takeaway: 'DeFM-L/14 has the best Top-5 KNN and linear-probe accuracy; DINOv3-L/16 leads Top-1 KNN by 0.6 points.',
+    takeaway: 'DeFM-L/14 has the best Top-5 KNN and linear-probe accuracy; Top-1 KNN is a tie with DINOv3-L/16 (64.76 vs. 64.79).',
   },
   S: {
     rows: [
-      ['DeFM ViT-S/14', [55.27, 78.06, 61.54], true],
-      ['DINOv3 ViT-S/16', [49.50, 70.93, 50.86]],
-      ['DINOv2 ViT-S/14', [47.66, 69.11, 55.06]],
-      ['Theia DeiT-S/16', [28.17, 47.47, 33.14]],
+      ['DeFM ViT-S/14', [57.02, 79.37, 62.74], true],
+      ['DINOv3 ViT-S/16', [49.45, 70.81, 50.95]],
+      ['DINOv2 ViT-S/14', [48.10, 69.63, 54.97]],
+      ['Theia DeiT-S/16', [28.82, 48.45, 33.36]],
     ],
-    takeaway: 'DeFM-S/14 leads all three metrics, by 5.8 to 7.1 points over the strongest ViT-S baseline.',
+    takeaway: 'DeFM-S/14 leads all three metrics, by 7.6 to 8.6 points over the strongest ViT-S baseline.',
   },
 };
 
@@ -104,18 +105,18 @@ const LOCO = {
 
 // [display name, family, params (M), linear probe (%), RTX 4090 ms, Orin ms, hub name]
 const ZOO = [
-  ['ViT-L/14', 'vit', '307.0', '71.72', '624.91', '72.82', 'defm_vit_l14'],
-  ['ViT-S/14', 'vit', '22.1', '61.54', '63.76', '11.92', 'defm_vit_s14'],
-  ['ResNet-50', 'resnet', '26.2', '61.54', '69.39', '17.79', 'defm_resnet50'],
-  ['ResNet-34', 'resnet', '21.8', '54.39', '33.08', '13.54', 'defm_resnet34'],
-  ['ResNet-18', 'resnet', '11.7', '50.58', '21.06', '8.67', 'defm_resnet18'],
-  ['RegNetY-1.6GF', 'regnet', '12.4', '57.28', '44.25', '41.82', 'defm_regnet_y_1_6gf'],
-  ['RegNetY-800MF', 'regnet', '6.3', '57.03', '25.21', '24.16', 'defm_regnet_y_800mf'],
-  ['RegNetY-400MF', 'regnet', '4.1', '50.51', '17.27', '25.17', 'defm_regnet_y_400mf'],
-  ['EfficientNet-B6', 'effnet', '28.98', '59.23', '150.98', '54.11', 'defm_efficientnet_b6'],
-  ['EfficientNet-B4', 'effnet', '14.16', '54.73', '86.51', '39.67', 'defm_efficientnet_b4'],
-  ['EfficientNet-B2', 'effnet', '4.95', '50.32', '46.12', '28.37', 'defm_efficientnet_b2'],
-  ['EfficientNet-B0', 'effnet', '3.01', '46.17', '29.39', '21.04', 'defm_efficientnet_b0'],
+  ['ViT-L/14', 'vit', '307.0', '72.76', '624.91', '72.82', 'defm_vit_l14'],
+  ['ViT-S/14', 'vit', '22.1', '62.74', '63.76', '11.92', 'defm_vit_s14'],
+  ['ResNet-50', 'resnet', '26.2', '62.56', '69.39', '17.79', 'defm_resnet50'],
+  ['ResNet-34', 'resnet', '21.8', '54.78', '33.08', '13.54', 'defm_resnet34'],
+  ['ResNet-18', 'resnet', '11.7', '51.57', '21.06', '8.67', 'defm_resnet18'],
+  ['RegNetY-1.6GF', 'regnet', '12.4', '58.88', '44.25', '41.82', 'defm_regnet_y_1_6gf'],
+  ['RegNetY-800MF', 'regnet', '6.3', '58.62', '25.21', '24.16', 'defm_regnet_y_800mf'],
+  ['RegNetY-400MF', 'regnet', '4.1', '51.80', '17.27', '25.17', 'defm_regnet_y_400mf'],
+  ['EfficientNet-B6', 'effnet', '28.98', '60.70', '150.98', '54.11', 'defm_efficientnet_b6'],
+  ['EfficientNet-B4', 'effnet', '14.16', '56.24', '86.51', '39.67', 'defm_efficientnet_b4'],
+  ['EfficientNet-B2', 'effnet', '4.95', '51.64', '46.12', '28.37', 'defm_efficientnet_b2'],
+  ['EfficientNet-B0', 'effnet', '3.01', '47.17', '29.39', '21.04', 'defm_efficientnet_b0'],
 ];
 
 // ---------------------------------------------------------------- charts
@@ -131,7 +132,7 @@ function renderBars(el, columns, rows, unit) {
   const domain = Math.min(100, Math.ceil(max / 10) * 10);
   const narrow = columns.length > 1 && el.clientWidth < 150 + columns.length * 110;
   const cell = (name, v, c) => {
-    const best = v === Math.max(...rows.map(r => r[1][c]));
+    const best = oneDecimal(v) === oneDecimal(Math.max(...rows.map(r => r[1][c])));  // ties at the shown precision are all bold
     const tip = `<strong>${name}</strong><br>${columns[c]}: ${v.toFixed(2)}${unit}`;
     return `<div class="bt-cell" data-tip="${tip.replace(/"/g, '&quot;')}">` +
       `<span class="bt-track"><span class="bar" style="width:${Math.max((v / domain) * 100, 0.8)}%"></span></span>` +
