@@ -28,7 +28,7 @@ const SEG = {
   C: {
     rows: [
       ['DeFM ResNet-50 (26M)', [35.34, 32.19, 52.55, 70.89, 31.95], true],
-      ['DeFM ResNet-34 (22M)', [33.87, 30.36, 52.21, 70.01, 27.86], true],
+      ['DeFM ResNet-34 (23M)', [33.87, 30.36, 52.21, 70.01, 27.86], true],
       ['DeFM ResNet-18 (12M)', [28.01, 25.97, 46.87, 65.49, 23.27], true],
       ['Utonia RE-PTv3 (137M)', [23.06, 20.70, 30.36, 59.79, 4.34]],
       ['Concerto PTv3-L (208M)', [21.52, 16.18, 32.25, 58.35, 4.44]],
@@ -103,20 +103,21 @@ const LOCO = {
   ],
 };
 
-// [display name, family, params (M), linear probe (%), RTX 4090 ms, Orin ms, hub name]
+// [display name, family, params (M), top-5 kNN (%), linear probe (%), RTX 4090 ms, Orin ms, hub name]
+// as in the model zoo of the GitHub README (github.com/leggedrobotics/defm)
 const ZOO = [
-  ['ViT-L/14', 'vit', '307.0', '72.76', '624.91', '72.82', 'defm_vit_l14'],
-  ['ViT-S/14', 'vit', '22.1', '62.74', '63.76', '11.92', 'defm_vit_s14'],
-  ['ResNet-50', 'resnet', '26.2', '62.56', '69.39', '17.79', 'defm_resnet50'],
-  ['ResNet-34', 'resnet', '21.8', '54.78', '33.08', '13.54', 'defm_resnet34'],
-  ['ResNet-18', 'resnet', '11.7', '51.57', '21.06', '8.67', 'defm_resnet18'],
-  ['RegNetY-1.6GF', 'regnet', '12.4', '58.88', '44.25', '41.82', 'defm_regnet_y_1_6gf'],
-  ['RegNetY-800MF', 'regnet', '6.3', '58.62', '25.21', '24.16', 'defm_regnet_y_800mf'],
-  ['RegNetY-400MF', 'regnet', '4.1', '51.80', '17.27', '25.17', 'defm_regnet_y_400mf'],
-  ['EfficientNet-B6', 'effnet', '28.98', '60.70', '150.98', '54.11', 'defm_efficientnet_b6'],
-  ['EfficientNet-B4', 'effnet', '14.16', '56.24', '86.51', '39.67', 'defm_efficientnet_b4'],
-  ['EfficientNet-B2', 'effnet', '4.95', '51.64', '46.12', '28.37', 'defm_efficientnet_b2'],
-  ['EfficientNet-B0', 'effnet', '3.01', '47.17', '29.39', '21.04', 'defm_efficientnet_b0'],
+  ['ViT-L/14', 'vit', '303.7', '85.42', '72.76', '624.91', '72.82', 'defm_vit_l14'],
+  ['ViT-S/14', 'vit', '21.6', '79.37', '62.74', '63.76', '11.92', 'defm_vit_s14'],
+  ['ResNet-50', 'resnet', '26.2', '78.93', '62.56', '69.39', '17.79', 'defm_resnet50'],
+  ['ResNet-34', 'resnet', '23.3', '73.84', '54.78', '33.08', '13.54', 'defm_resnet34'],
+  ['ResNet-18', 'resnet', '11.7', '70.93', '51.57', '21.06', '8.67', 'defm_resnet18'],
+  ['EfficientNet-B6', 'effnet', '28.98', '79.30', '60.70', '150.98', '54.11', 'defm_efficientnet_b6'],
+  ['EfficientNet-B4', 'effnet', '14.16', '76.45', '56.24', '86.51', '39.67', 'defm_efficientnet_b4'],
+  ['EfficientNet-B2', 'effnet', '4.95', '72.89', '51.64', '46.12', '28.37', 'defm_efficientnet_b2'],
+  ['EfficientNet-B0', 'effnet', '3.01', '69.54', '47.17', '29.39', '21.04', 'defm_efficientnet_b0'],
+  ['RegNetY-1.6GF', 'regnet', '12.4', '77.96', '58.88', '44.25', '41.82', 'defm_regnet_y_1_6gf'],
+  ['RegNetY-800MF', 'regnet', '6.3', '76.43', '58.62', '25.21', '24.16', 'defm_regnet_y_800mf'],
+  ['RegNetY-400MF', 'regnet', '4.1', '74.43', '51.80', '17.27', '25.17', 'defm_regnet_y_400mf'],
 ];
 
 // ---------------------------------------------------------------- charts
@@ -253,10 +254,11 @@ function setupVideoVisibility() {
 // ---------------------------------------------------------------- model zoo
 function setupZoo() {
   const body = document.getElementById('zooBody');
-  body.innerHTML = ZOO.map(([name, family, params, lin, gpu, orin, hub]) => `
+  body.innerHTML = ZOO.map(([name, family, params, knn5, lin, gpu, orin, hub]) => `
     <tr data-family="${family}">
       <td><strong>DeFM ${name}</strong></td>
       <td class="num">${params}</td>
+      <td class="num">${knn5}</td>
       <td class="num">${lin}</td>
       <td class="num">${gpu}</td>
       <td class="num">${orin}</td>

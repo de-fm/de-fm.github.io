@@ -39,10 +39,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=20261024a">
+  <link rel="stylesheet" href="static/css/index.css?v=20261025a">
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/index.js?v=20261024a"></script>
-  <script defer src="static/js/pca_explorer.js?v=20261024a"></script>
+  <script defer src="static/js/index.js?v=20261025a"></script>
+  <script defer src="static/js/pca_explorer.js?v=20261025a"></script>
 
   <script type="application/ld+json">
   {
@@ -166,12 +166,12 @@
 <section class="section" id="overview">
   <div class="wrap">
     <p class="tldr"><span class="tldr-tag">tl;dr</span> A DINO-style encoder, but for depth images. One frozen backbone that works across
-      navigation, manipulation and locomotion &mdash; released as 12 ready-to-use models from 3M to 307M parameters.</p>
+      navigation, manipulation and locomotion &mdash; released as 12 ready-to-use models from 3M to 304M parameters.</p>
 
     <div class="stats">
       <div class="stat"><span class="stat-num">60.4M</span><span class="stat-label">depth images for pretraining</span></div>
       <div class="stat"><span class="stat-num">18</span><span class="stat-label">real, synthetic &amp; MDE-derived datasets</span></div>
-      <div class="stat"><span class="stat-num">12</span><span class="stat-label">released models, 3M&ndash;307M params</span></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">released models, 3M&ndash;304M params</span></div>
       <div class="stat"><span class="stat-num">5</span><span class="stat-label">task families, frozen encoder</span></div>
     </div>
 
@@ -306,7 +306,7 @@
         <span class="kicker">01 &middot; Pretraining</span>
         <h3>Self-distillation on depth</h3>
         <p>DeFM uses a DINOv2-style objective with global and local crops. The student sees masked global crops and local crops and
-          learns to match the momentum teacher through DINO losses and iBOT patch-level supervision. We train a ViT-L/14 (307M) from scratch on depth.</p>
+          learns to match the momentum teacher through DINO losses and iBOT patch-level supervision. We train a ViT-L/14 (304M) from scratch on depth.</p>
       </div>
     </div>
 
@@ -475,7 +475,7 @@
 
 <!-- Model zoo -->
 <section class="section alt" id="models">
-  <div class="wrap">
+  <div class="wrap wide">
     <h2 class="section-title">Model zoo</h2>
     <p class="lead">All 12 models are on <a href="https://huggingface.co/leggedrobotics/defm" target="_blank" rel="noopener">Hugging Face</a> and loadable via TorchHub.
       Timings with PyTorch at 224&times;224, no TensorRT/ONNX.</p>
@@ -484,8 +484,8 @@
       <button class="chip is-active" data-family="all">All</button>
       <button class="chip" data-family="vit">ViT</button>
       <button class="chip" data-family="resnet">ResNet</button>
-      <button class="chip" data-family="regnet">RegNet</button>
       <button class="chip" data-family="effnet">EfficientNet</button>
+      <button class="chip" data-family="regnet">RegNet</button>
     </div>
     <div class="table-wrap">
       <table class="zoo">
@@ -493,6 +493,7 @@
           <tr>
             <th>Model</th>
             <th class="num">Params (M)</th>
+            <th class="num">Top-5 KNN (%)<br><small>ImageNet-1k-Depth</small></th>
             <th class="num">Linear probe (%)<br><small>ImageNet-1k-Depth</small></th>
             <th class="num">RTX 4090 (ms)<br><small>batch 128</small></th>
             <th class="num">Jetson Orin (ms)<br><small>batch 1</small></th>
